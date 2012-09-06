@@ -1,0 +1,56 @@
+!!!5
+%html
+  %head
+    %title pip 48 rails 
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    %link{rel: "shortcut icon", href: "/favicon.ico"}
+       
+  %body
+    %section{role: "header"}      
+      %div
+        %header
+        
+          %h1
+            =image_tag 'ninja.png', :class => "ninja"
+            %span._4> 4 
+            %span._8> 8
+            %small on
+            %span._rails> rails 
+        
+        
+        %article.pitch
+          %h2 13 e 14 Ottobre &ndash; Padova
+          
+          %h2 I migliori Rails ninja d&#39Italia. 48h di hackaton nonstop.
+          
+          %p 
+            %input{type: 'button', class: 'btn btn-large btn-inverse', value: 'Accetta la sfida'}
+        
+    
+    %section{role: "main"}
+      %div
+        = yield
+
+        %footer
+          %h2.pitch Facciamo saltare i binari.
+          
+          = image_tag 'ninja_rails.png', :class => "ninja"
+          = image_tag 'dynamite.png', :class => "dynamite"
+
+    %footer
+      %div
+        
+        %article
+          %header About
+          %p 48 on Rails &egrave; un evento organizzato da Programmers in Padua
+          = image_tag 'dexter.png'
+          
+        %article
+          %header
+            Share the love
+          %p 
+          
+        %article
+  

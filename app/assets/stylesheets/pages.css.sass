@@ -1,2 +1,66 @@
 @import compass
+@import susy
 @import bootstrap
+
+body
+  +background(linear-gradient(black #001848))
+  font-family: 'Open Sans Condensed', sans-serif  
+  
+  article
+    
+    header
+      @extend h2
+      margin-bottom: 9px
+   
+  .pitch
+    +span-columns(12)
+    @extend .lead
+    font-size: 2em
+    text-align: center    
+    padding: 54px 0 36px
+    
+        
+    input[type=button]
+      margin-top: 36px
+
+  p
+    font-size: 1.2em
+    line-height: 1.4em  
+    
+  section[role=main] 
+    
+    article
+      
+    footer
+      position: absolute
+      bottom: 0
+      width: 100%
+        
+      .ninja
+        position: absolute
+        left: 0
+        bottom: 20px
+        
+      .dynamite
+        position: absolute
+        left: 240px
+        bottom: 15px
+      
+      .pitch
+        text-align: right
+      
+    form
+      margin: 18px 0
+      
+      input[type=email]
+        vertical-align: top
+        width: 300px
+        padding: 9px 5px 8px
+        
+      input[type=submit]
+        @extend .btn
+        @extend .btn-large  
+        
+      span
+        @extend .help-block
+        color: desaturate(#d9dade, 20%)

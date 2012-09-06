@@ -1,11 +1,93 @@
 @import compass
 @import susy
 
-$total-columns  : 12
+$total-columns  : 11
 $column-width   : 4em
 $gutter-width   : 1em
 $grid-padding   : $gutter-width
 
-body
-  +container
+
+html
+  background: black
+  //+background(linear-gradient(darken(#3e3e53, 5%) #3e3e53))
+
+body  
   
+  > section[role=header]
+    background: white
+    
+    > div
+      +container
+        
+    header
+      padding-top: 18px
+      text-align: center
+      
+      h1          
+        font-size: 10em
+        font-family: 'Lemon', 'Russo One', sans-serif
+        line-height: .8em
+        color: rgb(86, 87, 89)
+        white-space: nowrap
+        
+        
+        img
+          vertical-align: sub
+
+      ._4
+        display: inline-block
+        +transform-origin(70%,100%)
+        +transform(translate(0, -40px) rotate(20deg))
+
+        
+      small
+        vertical-align: middle
+        margin-left: 5px
+    
+    
+  > section[role=main]
+    color: #d9dade
+    background: image_url('landscape.png') no-repeat bottom center
+    padding: 36px
+          
+    >div
+      position: relative
+      +container
+      min-height: 1000px
+
+    
+    section
+      margin-bottom: 72px
+    
+    .sponsors
+      
+      article
+        +span-columns(12)    
+    
+    .rsvp
+      text-align: center    
+    
+    
+  > section[role=main], > footer
+    
+    article
+      +span-columns(3) 
+      
+      &:not(:last-of-type)  
+        +suffix(1)  
+                
+      &:last-of-type
+        +omega
+  
+
+        
+  > footer
+    +background(linear-gradient(#3d3028 #a08855))
+    padding: 36px 0 0
+    color: #d9dade
+    
+    div
+      +container
+      background
+                  
+      
