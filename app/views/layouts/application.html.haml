@@ -13,43 +13,70 @@
         %header
         
           %h1
-            =image_tag 'ninja.png', :class => "ninja"
+            =image_tag 'ninja_logo.png', :class => "ninja"
             %span._4> 4 
             %span._8> 8
             %small on
             %span._rails> rails 
         
         
-        %article.pitch
-          %h2 13 e 14 Ottobre &ndash; Padova
-          
-          %h2 I migliori Rails ninja d&#39Italia. 48h di hackaton nonstop.
-          
-          %p 
-            %input{type: 'button', class: 'btn btn-large btn-inverse', value: 'Accetta la sfida'}
-        
+        %article
+          %h2.pitch 13 e 14 Ottobre &ndash; Padova
+          %h2.pitch I migliori Rails ninja d&#39Italia. 48h di hackaton nonstop.
+                  
     
     %section{role: "main"}
       %div
         = yield
 
         %footer
-          %h2.pitch Facciamo saltare i binari.
           
-          = image_tag 'ninja_rails.png', :class => "ninja"
+          = image_tag 'tree.png', :class => "tree"
+          = image_tag 'ninja_bottom.png', :class => "ninja"
           = image_tag 'dynamite.png', :class => "dynamite"
 
+          %h2.pitch Pronti a far saltare i binari in:
+
+
     %footer
+
+      #timer
+        .countdown
+          =image_tag "filmstrip_09.png", id: "d10"
+        .countdown.points 
+          =image_tag "filmstrip_09.png", id: "d1"
+          days
+        .countdown
+          =image_tag "filmstrip_05.png", id: "h10"
+        .countdown.points
+          =image_tag "filmstrip_09.png", id: "h1"
+        .countdown
+          =image_tag "filmstrip_05.png", id: "m10"
+        .countdown.points
+          =image_tag "filmstrip_09.png", id: "m1"
+        .countdown
+          =image_tag "filmstrip_05.png", id: "s10"
+        .countdown
+          =image_tag "filmstrip_09.png", id: "s1"  
+          
+        %p giorni
+        %p ore
+        %p minuti
+        %p secondi  
+    
       %div
         
         %article
           %header About
-          %p 48 on Rails &egrave; un evento organizzato da Programmers in Padua
-          = image_tag 'dexter.png'
+          %p 
+            = image_tag 'dexter.png', :class => "dexter"
+            %b 48 on Rails 
+            &egrave; un evento creato da 
+            Programmers in Padua, il club dei developers padovani.
+            Vuoi saperne di pi&ugrave;?
           
         %article
-          %header
-            Share the love
+          %header Share the love
           %p 
           
         %article
