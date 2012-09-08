@@ -18,7 +18,7 @@
     +translate(-100px, -10px)
    
   45%
-    +translate(-100px, -100px)  
+    +translate(-80px, -100px)  
   
   60%
     +translate(0, 0)
@@ -40,24 +40,26 @@
 
 +keyframes(shuriken)
   0%, 19.1%, 60.1%, 100%
-    visibility: hidden
-
-  20%
-    visibility: visible
     bottom: 150px
     right: 130px
     width: 20px
     height: 20px
-
+    
+  20%
+    bottom: 150px
+    right: 130px
+    width: 20px
+    height: 20px
+  
+  
   60%
-    visibility: visible
     bottom: 0
     right: 800px
     width: 50px
     height: 50px
     
 +keyframes(throw)
-  0%, 20%, 100%
+  0%, 20%, 60%, 100%
     right: 50px
   
   25%
@@ -91,6 +93,8 @@ body
         
         
         .ninja
+          position: relative
+          left: 20px
           vertical-align: sub
           +transform-origin(35px,0,0)
           +animation(spinning_kick 3s infinite)
@@ -98,7 +102,7 @@ body
 
         ._4
           display: inline-block
-          vertical-align: super
+          height: 1em
           +transform-origin(100%,100%)
           +animation(kicked 3s infinite)
           
@@ -113,7 +117,8 @@ body
     
   section[role=main] 
     color: #d9dade
-    background: image_url('landscape.png') no-repeat bottom center    
+    background: image_url('landscape.png') no-repeat bottom center 
+    border-bottom: 5px solid lighten(rgb(2,65,35), 2%)   
           
     form
       margin: 18px 0
@@ -238,14 +243,15 @@ body
         
       
   > footer
-    +background(linear-gradient(#3d3028 darken(#a08855,10)))
+    border-top: 20px solid darken(#3d3028, 10%)
+    +background(linear-gradient(top, #3d3028 0%, darken(#a08855, 15%) 50%, #544741 95%))
     color: #d9dade
     
     > div:not(#timer)
       background: image_url('dragon.png') no-repeat right top
     
     .dexter
-      float: right
+      float: left
       
     ul
       margin-left: 0
