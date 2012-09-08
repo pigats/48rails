@@ -14,6 +14,7 @@ body
   
   
   > section[role=header]
+    padding-top: 36px    
         
     header
       padding-top: 18px
@@ -27,6 +28,10 @@ body
     >div
       position: relative
       min-height: 1500px
+
+    
+    .pitch
+      margin: 18px 0
 
     
     section
@@ -58,14 +63,12 @@ body
       &:last-of-type
         +omega
 
-  pitch
-    +span-columns(12)
-
+  .pitch
+    +span-columns(11)
         
   > footer
-    padding: 18px 0
+    padding: 18px 0 0
     
     > div:not(#timer)
-      +container
-                  
+      +container                  
       

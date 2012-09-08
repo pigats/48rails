@@ -2,18 +2,18 @@
 %html
   %head
     %title pip 48 rails 
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
     = csrf_meta_tags
-    %link{rel: "shortcut icon", href: "/favicon.ico"}
+    %link{rel: 'shortcut icon', href: '/favicon.ico'}
        
   %body
-    %section{role: "header"}      
+    %section{role: 'header'}      
       %div
         %header
         
           %h1
-            =image_tag 'ninja_logo.png', :class => "ninja"
+            =image_tag 'ninja_logo.png', class: 'ninja'
             %span._4> 4 
             %span._8> 8
             %small on
@@ -25,15 +25,15 @@
           %h2.pitch I migliori Rails ninja d&#39Italia. 48h di hackaton nonstop.
                   
     
-    %section{role: "main"}
+    %section{role: 'main'}
       %div
         = yield
 
         %footer
           
-          = image_tag 'tree.png', :class => "tree"
-          = image_tag 'ninja_bottom.png', :class => "ninja"
-          = image_tag 'dynamite.png', :class => "dynamite"
+          = image_tag 'tree.png', class: 'tree'
+          = image_tag 'ninja_bottom.png', class: 'ninja'
+          = image_tag 'dynamite.png', class: 'dynamite'
 
           %h2.pitch Pronti a far saltare i binari in:
 
@@ -42,22 +42,22 @@
 
       #timer
         .countdown
-          =image_tag "filmstrip_09.png", id: "d10"
+          =image_tag 'filmstrip_09.png', id: 'd10'
         .countdown.points 
-          =image_tag "filmstrip_09.png", id: "d1"
+          =image_tag 'filmstrip_09.png', id: 'd1'
           days
         .countdown
-          =image_tag "filmstrip_05.png", id: "h10"
+          =image_tag 'filmstrip_05.png', id: 'h10'
         .countdown.points
-          =image_tag "filmstrip_09.png", id: "h1"
+          =image_tag 'filmstrip_09.png', id: 'h1'
         .countdown
-          =image_tag "filmstrip_05.png", id: "m10"
+          =image_tag 'filmstrip_05.png', id: 'm10'
         .countdown.points
-          =image_tag "filmstrip_09.png", id: "m1"
+          =image_tag 'filmstrip_09.png', id: 'm1'
         .countdown
-          =image_tag "filmstrip_05.png", id: "s10"
+          =image_tag 'filmstrip_05.png', id: 's10'
         .countdown
-          =image_tag "filmstrip_09.png", id: "s1"  
+          =image_tag 'filmstrip_09.png', id: 's1'  
           
         %p giorni
         %p ore
@@ -69,15 +69,38 @@
         %article
           %header About
           %p 
-            = image_tag 'dexter.png', :class => "dexter"
+            = image_tag 'dexter.png', class: 'dexter'
             %b 48 on Rails 
-            &egrave; un evento creato da 
-            Programmers in Padua, il club dei developers padovani.
-            Vuoi saperne di pi&ugrave;?
+            &egrave; una iniziativa di&nbsp; 
+            %a{href: 'http://www.programmersinpadua.it'}> Programmers in Padua
+            , il club degli sviluppatori di Padova e dintorni.
+            
+          %ul
+            %li 
+              %a{href: 'http://twitter.com/brigugraphic'} @brigugraphic 
+              &ndash; graphic ninja
+            %li
+              %a{href: 'http://twitter.com/ogeidix'} @ogeidix
+              &ndash; west coast ninja  
+            %li 
+              %a{href: 'http://twitter.com/pigatss'} @pigatss
+              &ndash; organization ninja          
+            %li
+              %a{href: 'http://twitter.com/realfuzzy'} @realfuzzy
+              &ndash; rails ninja
+            
           
         %article
-          %header Share the love
+          %header Condividi
+          %p
+            Fai sapere ai tuoi amici che vieni! Porta il tuo team, o aggregati agli altri dev che ancora ne cercano uno.
+
+          %header Contattaci
           %p 
-          
+            Per qualsiasi informazione scrivici a
+            %a{href: 'mailto:ninja@48rails.it'} ninja@48rails.it
+            
+
+            
         %article
   

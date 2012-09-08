@@ -4,7 +4,7 @@
 
 body
   +background(linear-gradient(black #001848))
-  font-family: sans-serif  
+  font-family: sans-serif     
 
   > section[role=header]
     background: white
@@ -129,5 +129,18 @@ body
     +background(linear-gradient(#3d3028 darken(#a08855,10)))
     color: #d9dade
     
+    > div:not(#timer)
+      background: image_url('dragon.png') no-repeat right top
+    
     .dexter
       float: right
+      
+    ul
+      margin-left: 0
+      
+      
+  article
+
+    a, a:hover
+      color: #d9dade
+      text-decoration: underline
