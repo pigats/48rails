@@ -3,12 +3,37 @@
 @import bootstrap
 @import animation
 
-+keyframes(swing)
++keyframes(pendulum)
   0%, 100%
     +rotate(5deg)
   50%
     +rotate(-5deg)
 
+
++keyframes(flying_kick)
+  0%, 100%
+    +translate(-200px, -10px)
+  
+  20%
+    +translate(-150px, -100px)
+    
+  30%
+    +translate(0, 0)
+
++keyframes(spinning_kick)
+  0%, 100%
+    +rotateY(80deg)
+  
+  5%, 98%
+    +rotateY(0)
+    
++keyframes(kicked)     
+  0%, 60%, 100%
+    +transform(translate(0,0) rotate(0))  
+  3%
+    +transform(translate(40px, -50px) rotate(20deg))
+  10%
+    +transform(translate(30px, 0) rotate(5deg))
 
 body
   +background(linear-gradient(black #001848))
@@ -29,13 +54,16 @@ body
         white-space: nowrap
         
         
-        img
+        .ninja
           vertical-align: sub
+          +animation(spinning_kick 3s infinite)
+          
 
         ._4
           display: inline-block
+          vertical-align: super
           +transform-origin(100%,100%)
-          +transform(translate(20px, -50px) rotate(20deg))
+          +animation(kicked 3s infinite)
           
         small
           vertical-align: middle
@@ -77,7 +105,7 @@ body
         margin-top: -200px
         z-index: 0
         +transform-origin(90px, 0)
-        +animation(swing 3s infinite)
+        +animation(pendulum 3s infinite)
         
     footer
         
@@ -87,6 +115,7 @@ body
       .ninja
         left: 0
         bottom: 20px
+        +animation(flying_kick 2s infinite)
         
         
       .dynamite
