@@ -42,7 +42,8 @@ bottom_9 = -26312;
 bottom_5 = -15752;
 bottom_3 = -7920;
 bottom_2 = -5280;
-setInterval("timer_s1()",t)
+
+//setInterval("timer_s1()",t) moved to pages.js
 
 })
 
