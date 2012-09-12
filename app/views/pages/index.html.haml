@@ -1,46 +1,26 @@
 %article
-  %header La missione
-  %p 
-    Vogliamo riunire i migliori dev Rails italiani per condividere la sfida del&nbsp;
-    %a{href: 'http://blog.railsrumble.com', target: '_blank'}> RailsRumble 2012
-    , la coding competition internazionale pi&ugrave; estrema (e divertente!) cui uno sviluppatore Rails possa ambire.
-  
-  %p Per 48h sarai immerso in un ambiente senza distrazioni libero di ideare, sviluppare e pubblicare una webapp che la giuria internazionale del Rumble valuter&agrave; per design, completezza, originalit&agrave; e utilit&agrave;. Mostra il tuo valore!
+  %header=t '.mission_title'
+  =t '.mission_desc_html'
 
 %article
   %header 
-    Hackaton
+    Hackathon
     %sup> 2
-  %p Una semplice hackaton? Non era abbastanza geek.
-  
-  %p Il nostro timer sar&agrave; quello ufficiale del RailsRumble: 48 ore esatte durante le quali oltre che col tempo ti misurerai con team provenienti da tutto il mondo.
-  
-  %p Scegli fino a 3 compagni, portate la vostra idea vincente. E preparatevi a fare tardi, molto tardi.
-  
-  %p 
-    Il tempo ti sembra troppo poco? Niente di pi&ugrave; sbagliato, dai un&#39;occhiata ai 
-    %a{href: 'http://archive.railsrumble.com/', target: '_blank'} risultati delle scorse edizioni.
+  =t '.hackathon_desc_html'
     
 %article
   %header Distraction-free   
-  %p Due giorni da dedicare esclusivamente alla tua furia creativa. A *tutto* il resto pensiamo noi. All Inclusive.
-
-  %p Abbiamo riservato un edificio intero per il weekend, non lontano dal centro di Padova. 
-  %p 
-    Ci saranno postazioni per lavorare, connettività, cibo, taniche di caffeina e&hellip; camere da letto per quando non potrete più rinviare un sonnellino. Per i pi&ugrave; 
-    %span{style: 'text-decoration: line-through;'} romantici
-    virtuosi anche un giardino privato in cui passeggiare per riordinare le idee. 
-  
+  =t '.distraction_free_desc_html'  
 
 %section.rsvp 
   = image_tag 'ninja+railsrumble.png'
   
-  %h2.pitch Voi portate il laptop. Noi pensiamo a tutto il resto.
+  %h2.pitch=t '.bring_your_laptop'
   
   %p.pitch
     %a.btn.btn-large.disabled
       %i.icon-calendar 
-      20 Biglietti disponibili da martedì 11/9
+      =t '.twenty_tickets'
 
   -# %form
     -# %input{type: 'email', placeholder: 'tua @ email'}
@@ -51,49 +31,37 @@
 %section.social
   
   %article
-    %header Partecipanti
-    %p 
-      Facci sapere che vieni, e verrai inserito con gli altri ninja nella sezione partecipanti. 
-    %p
-      Porta il tuo team, o scrivici a 
-      %a{href: 'mailto:ninja@48rails.it'} ninja@48rails.it
-      se cerchi una squadra cui aggregarti.
+    %header=t '.participants'
+    =t '.participants_desc_html'
       
   %article 
     %header Social 
-    %p 
-      Segui
-      %a{href: 'http://twitter.com/48rails', target: '_blank'} @48rails
-      per rimanere aggiornato, e twitta con l&#39;hashtag ufficiale 
-    %h1 #48rails
+    =t '.social_desc_html'
+    <h1> #48rails</h1>
 
   %article
     =image_tag 'ninja_dev.png', class: 'ninja'
 
 %section.sponsors
-  %header Diventa nostro sponsor
-  
-  %p Due eventi al prezzo di uno:
-  %p Per la prima volta in Italia i migliori sviluppatori Rails parteciperanno insieme al RailsRumble, una delle più famose coding competition internazionali, ampiamente pubblicizzata e discussa in rete.
-  %p Secondo, ma non meno importante: l&#39;opportunità di venire in contatto con alcuni tra i più importanti sviluppatori Ruby e Ruby on Rails che si muovono nel panorama italiano (e oltre!)
-  %p Il tuo logo verr&agrave; inserito nel sito e sarai menzionato durante l&#39;hackaton. 
+  %header=t '.become_sponsor'
+  =t '.sponsorship_desc_html'
 
   %p.pitch
-    %a.btn.btn-large{href: 'mailto:sponsor@48rails.it?subject=Offerta sponsor'}
+    %a.btn.btn-large{href: 'mailto:sponsor@48rails.it?subject=Sponsorship'}
       %i.icon-heart 
-      Diventa sponsor di 48 rails 
+      =t '.become_sponsor_button'
     
   %article
     = image_tag 'location.png'
     %header Location
-    %p Aiutaci a coprire le spese per la nostra fantastica location: un intero edificio riservato, con spazi per lavorare, mangiare e  (di tanto in tanto) riposare. 
+    %p=t '.sponsor_location_desc'
     
   %article
     = image_tag 'caffeine.png'
-    %header Cibo &amp; Caff&egrave;
-    %p Avete idea di quanto possano essere famelici dei ninja dev mentre lavorano? 48h sono lunghe, avremo bisogno di cibo, snack, bevande e soprattutto&hellip; caffeina! 
+    %header=t '.sponsor_food_and_coffee'
+    %p=t '.sponsor_food_and_coffee_desc'
     
   %article
     = image_tag 'prize.png'
-    %header Premi
-    %p La tua azienda ha delle API pubbliche e vuoi mettere in palio un premio per l&#39;hack pi&ugrave; cool? Mettiti in contatto con noi, resterai sbalordito.  
+    %header=t '.sponsor_prizes'
+    %p=t '.sponsor_prizes_desc'
