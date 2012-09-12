@@ -19,6 +19,15 @@
             %small on
             %span._rails> rails 
         
+        %article{style: 'margin: -50px 0 20px 400px; position:relative'}
+          choose your language: 
+          - if I18n.locale == :it
+            %a{:href=>"#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=en"} English
+            &dash; Italian
+          - else
+            English &dash;
+            %a{:href=>"#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=it"} Italian
+
         %article
           %h2.pitch=t 'layout.when'
           %h2.pitch=t 'layout.pitch'
