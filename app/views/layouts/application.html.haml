@@ -1,7 +1,7 @@
 !!!5
 %html
   %head
-    %title 48 rails &ndash; L&#39;hackaton dei migliori Rails ninja italiani 
+    %title=t 'layout.title'
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
@@ -23,8 +23,8 @@
   %body
     %section{role: 'header'}      
       %div
+
         %header
-        
           %h1
             =image_tag 'ninja_logo.png', class: 'ninja animated'
             %span._4.animated> 4
@@ -32,10 +32,18 @@
             %small on
             %span._rails> rails 
         
-        
+        %article{style: 'margin: -50px 0 20px 400px; position:relative'}
+          choose your language: 
+          - if I18n.locale == :it
+            %a{:style=>"color: black", :href=>"#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=en"} English
+            &dash; Italian
+          - else
+            English &dash;
+            %a{:style=>"color: black", :href=>"#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=it"} Italian
+
         %article
-          %h2.pitch 13 e 14 Ottobre &ndash; Padova
-          %h2.pitch I migliori Rails ninja si misurano in 48h di hackaton nonstop
+          %h2.pitch=t 'layout.when'
+          %h2.pitch=t 'layout.pitch'
                   
     
     %section{role: 'main'}
@@ -51,7 +59,7 @@
           = image_tag 'shuriken.png', class: 'shuriken'
           = image_tag 'flower.png', class: 'flower' 
           
-          %h2.pitch Pronti a far saltare i binari in:
+          %h2.pitch=t 'layout.countdown'
 
 
     %footer
@@ -75,10 +83,10 @@
         .countdown
           =image_tag 'filmstrip_09.png', id: 's1'  
           
-        %p giorni
-        %p ore
-        %p minuti
-        %p secondi  
+        %p=t 'layout.days'
+        %p=t 'layout.hours'
+        %p=t 'layout.minutes'
+        %p=t 'layout.seconds'
     
       %div
         
@@ -86,10 +94,12 @@
           %header About
           %p 
             = image_tag 'dexter.png', class: 'dexter'
-            %b 48 rails 
-            &egrave; un progetto sviluppato da&nbsp; 
+            %b 48 rails&nbsp;
+            =t 'layout.a_project_by'
+            &nbsp;  
             %a{href: 'http://www.programmersinpadua.it', target: '_blank'}> Programmers in Padua
-            , il club degli sviluppatori di Padova.
+            ,
+            =t 'layout.pip_pitch'
             
           %ul
             %li 
@@ -108,16 +118,16 @@
           
         %article
 
-          %header Contattaci
+          %header=t 'layout.contact_us'
           %p 
-            Per qualsiasi informazione scrivici a
+            =t 'layout.email_us_at'
             %a{href: 'mailto:ninja@48rails.it'} ninja@48rails.it
           
           %p 
-            Oppure puoi twittare a 
+            =t 'layout.tweet_us_at'
             %a{href: 'http://twitter.com/48rails', target: '_blank'} @48rails
             
-          %p Perch&egrave; non dare una mano con l&#39;organizzazione dell&#39;evento?
+          %p=t 'layout.staff_call'
                       
         %article
   
