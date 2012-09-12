@@ -1,0 +1,16 @@
+it:
+  layout:
+    title:        "48 rails – L'hackaton dei migliori Rails ninja italiani"
+    when:         "13 e 14 Ottobre – Padova"
+    pitch:        "I migliori Rails ninja si misurano in 48h di hackaton nonstop"
+    countdown:    "Pronti a far saltare i binari in:"
+    days:         "giorni"
+    hours:        "ore"
+    minutes:      "minuti"
+    seconds:      "secondi"
+    a_project_by: "è un progetto sviluppato da "
+    pip_pitch:    "il club degli sviluppatori di Padova."
+    contact_us:   "Contattaci"
+    email_us_at:  "Per qualsiasi informazione scrivici a"
+    tweet_us_at:  "Oppure puoi twittare a"
+    staff_call:   "Perchè non dare una mano con l'organizzazione dell'evento?"

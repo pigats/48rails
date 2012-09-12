@@ -1,5 +1,16 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  layout:
+    title:        "48 rails – Best Italian Rails Ninja in Hackathon"
+    when:         "13th and 14th October – Padova (Italy)"
+    pitch:        "The best Rails ninja will fight in a 48h nonstop hackaton"
+    countdown:    "Ready to blow up the tracks in:"
+    days:         "days"
+    hours:        "hours"
+    minutes:      "minutes"
+    seconds:      "seconds"
+    a_project_by: "is an event organized by"
+    pip_pitch:    "the developers community in Padova."
+    contact_us:   "Contact Us"
+    email_us_at:  "For any information email us at"
+    tweet_us_at:  "Or tweet us at"
+    staff_call:   "Join the organizers to create a better event!"
