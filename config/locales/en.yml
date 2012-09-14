@@ -1,38 +1,43 @@
 en:
 
   layout:
-    title:        "48 rails – Best Italian Rails Ninja in Hackathon"
-    when:         "13th and 14th October – Padova (Italy)"
+    title:        "48rails – an incredible hackathon for italian Rails ninjas"
+    when:         "October 13th and 14th – Padova (Italy)"
     pitch:        "The best Rails ninja will fight in a 48h nonstop hackathon"
-    countdown:    "Ready to blow up the tracks in:"
+    countdown:    "Blasting Rails in:"
     days:         "days"
     hours:        "hours"
     minutes:      "minutes"
     seconds:      "seconds"
     a_project_by: "is an event organized by"
-    pip_pitch:    "the developers community in Padova."
+    pip_pitch:    "the developers community of Padova."
     contact_us:   "Contact Us"
     email_us_at:  "For any information email us at"
     tweet_us_at:  "Or tweet us at"
-    staff_call:   "Join the organizers to create a better event!"
+    staff_call:   "Join the organizers, help create a better event!"
 
   pages:
 
     index:
       mission_title: "Our Mission"
-      mission_desc_html: "<p>We want to bring together the best Rails developers from the Italian community to play <a href='http://blog.railsrumble.com' target='_blank'>RailsRumble 2012</a>, the most extreme, challenging and fun international coding competition a Ruby developer can join.</p><p>For 48 hours you will be free from distractions and all you have to do is to think, develop, and publish a webapp that will be voted by an international jury for design, completeness, originality and utily. Show everybody your courage!</a>"
-      hackathon_desc_html: "<p>A simple Hackathon? It's not sufficient to us!</p><p>Our timer will be sincronized with the official RailsRumble timer: 48 hours during which you will fight against the time but also against the teams coming from all the world.</p><p>Choose up to 3 teammates, think about a winning idea and be ready to stay up late!</p><p>Do you think that the time is too short? Check the web applications made in the <a href='http://archive.railsrumble.com/' target='_blank'>previous years.</a></p>"
-      distraction_free_desc_html: "<p>Two days dedicated exclusively to your creativity. We will take care of *everything else*.</p><p>One entire building is reserved for the whole weekend, close to the center of Padova.</p><p>There will be desks for your team, connectivity, food, tanks of coffee and… bedrooms to rest when you can't postpone anymore a nap. There will be also a nice private garden where walk to reorganize the ideas.</p>"
-      bring_your_laptop: "Bring your laptop. We will take care of the rest."
+      
+      mission_desc_html: "<p>We want to gather the best Rails developers from the Italian community to hack together at <a href='http://blog.railsrumble.com' target='_blank'>RailsRumble 2012</a>, the most extreme, challenging and fun international coding competition a Ruby developer can join.</p><p>For 48 hours you will be free from every distractio and free to think, develop and publish a webapp that will be judged by an international jury on design, completeness, originality and utily. Show your courage!</a>"
+      
+      hackathon_desc_html: "<p>A simple Hackathon would not have been enough!</p><p>We'll synchronize with the official RailsRumble timer: 48 hours to fight against the clock and the other teams from all over the world.</p><p>Choose up to 3 teammates, think about a genius idea and&hellip; get ready to stay up late!</p><p>Do you think the time is not enough? Check what others have accomplished the <a href='http://archive.railsrumble.com/' target='_blank'>past years.</a></p>"
+      
+      distraction_free_desc_html: "<p>Two days exclusively dedicated to your creative fury. We will take care of *everything* else.</p><p>One entire building is reserved for the whole weekend, in the heart of Padova.</p><p>There will be desks for your team, connectivity, food, loads of coffee and&hellip; bedrooms for napping when postponing is no more an option. There will also be a nice private garden to walk and clarify ideas.</p>"
+      
+      bring_your_laptop_html: "Bring your laptop. We'll take care of everything else."
       twenty_tickets: "20 tickets available starting from tuesday 9/11"
       participants: "Participants"
-      participants_desc_html: "<p>Tell us about your participation, you will be added to the wall of ninja!</p><p>Bring your team or write us at <a href='mailto:ninja@48rails.it'>ninja@48rails.it</a> if you are looking for a team to join.</p>"
-      social_desc_html: "<p>Follow <a href='http://twitter.com/48rails' target: '_blank'>@48rails</a> to stay updated, and use the official hashtag</p>"
+      participants_desc_html: "<p>Tell us about your participation, so we can feature you on the website!</p><p>Bring your team or write us at <a href='mailto:ninja@48rails.it'>ninja@48rails.it</a> if you are looking for one to join.</p>"
+      social_desc_html: "<p>Follow <a href='http://twitter.com/48rails' target: '_blank'>@48rails</a> for updates, and use the official hashtag</p>"
+      
       become_sponsor: "Sponsorship"
-      sponsorship_desc_html: "<p>Two events in one:</p><p>For the first time in Italy, the best developers will participate together at the Rails Rumble, one of the most famous international coding competition, largely advertised and discussed all over internet.</p><p>Then, but not less important, you will have the opportunity to meet some of the most important Ruby developers from the italian community.</p><p>Your logo will be added to our website and you will be mentioned during the hackathon.</p>"
-      become_sponsor_button: "Become a sponsor of 48 rails"
-      sponsor_location_desc: "Help us with the outgoings needed to rent the location: it's an entire building completely reserved for us, with spaces to work, eat and (sometimes) do a nap."
+      sponsorship_desc_html: "<p>Two events in one:</p><p>For the first time in Italy, the best developers will take part in the Rails Rumble, one of the most famous international coding competition, that will get a very good coverage online.</p><p>Second, but not less important, it's a good opportunity to meet some of the most important Ruby developers from the italian community.</p><p>Your logo will be added to our website and you will be mentioned during the hackathon.</p>"
+      become_sponsor_button: "Sponsor 48rails"
+      sponsor_location_desc: "Help us with pay our awesome location: it's an entire building completely reserved for us, with rooms for working, eating and (sometimes) napping."
       sponsor_food_and_coffee: "Food & Coffee"
-      sponsor_food_and_coffee_desc: "Do you know how much can be hungry a bunch of ninja developers after some hours of coding? 48h are really long, we definetely need a lot of food, snacks, drinks and… coffee!"
+      sponsor_food_and_coffee_desc: "Ninja developers become super hungry after some hours of coding! 48h is a long time, we definitely need a lot of food, snacks, drinks and&hellip; coffee!"
       sponsor_prizes: "Prizes"
-      sponsor_prizes_desc: "Your company has a public API and wants to put a prize for the best hack with it? Contact us, you'll be amazed!"
+      sponsor_prizes_desc: "Does your company have a public API and want to put a prize for the best hack? Contact us, you'll be amazed!"

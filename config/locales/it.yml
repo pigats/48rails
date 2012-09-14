@@ -1,7 +1,7 @@
 it:
 
   layout:
-    title:        "48 rails – L'hackathon dei migliori Rails ninja italiani"
+    title:        "48rails – L'hackathon dei migliori Rails ninja italiani"
     when:         "13 e 14 Ottobre – Padova"
     pitch:        "I migliori Rails ninja si misurano in 48h di hackathon nonstop"
     countdown:    "Pronti a far saltare i binari in:"
@@ -23,14 +23,14 @@ it:
       mission_desc_html: "<p>Vogliamo riunire i migliori dev Rails italiani per condividere la sfida del <a href='http://blog.railsrumble.com' target='_blank'>RailsRumble 2012</a>, la coding competition internazionale più estrema (e divertente!) cui uno sviluppatore Rails possa ambire.</p><p>Per 48h sarai immerso in un ambiente senza distrazioni libero di ideare, sviluppare e pubblicare una webapp che la giuria internazionale del Rumble valuterà; per design, completezza, originalità e utilità. Mostra il tuo valore!</a>"
       hackathon_desc_html: "<p>Una semplice hackathon? Non era abbastanza geek.</p><p>Il nostro timer sarà quello ufficiale del RailsRumble: 48 ore esatte durante le quali oltre che col tempo ti misurerai con team provenienti da tutto il mondo.</p><p>Scegli fino a 3 compagni, portate la vostra idea vincente. E preparatevi a fare tardi, molto tardi.</p><p>Il tempo ti sembra troppo poco? Niente di pi&ugrave; sbagliato, dai un&#39;occhiata ai <a href='http://archive.railsrumble.com/' target='_blank'>risultati delle scorse edizioni.</a></p>"
       distraction_free_desc_html: "<p>Due giorni da dedicare esclusivamente alla tua furia creativa. A *tutto* il resto pensiamo noi. All Inclusive.</p><p>Abbiamo riservato un edificio intero per il weekend, non lontano dal centro di Padova.</p><p>Ci saranno postazioni per lavorare, connettività, cibo, taniche di caffeina e&hellip; camere da letto per quando non potrete più rinviare un sonnellino. Per i pi&ugrave; <span style='text-decoration: line-through;'>romantici</span> virtuosi anche un giardino privato in cui passeggiare per riordinare le idee.</p>"
-      bring_your_laptop: "Voi portate il laptop. Noi pensiamo a tutto il resto."
+      bring_your_laptop_html: "Voi portate il laptop. Noi pensiamo a tutto il resto."
       twenty_tickets: "20 Biglietti disponibili da martedì 11/9"
       participants: "Partecipanti"
       participants_desc_html: "<p>Facci sapere che vieni, e verrai inserito con gli altri ninja nella sezione partecipanti.</p><p>Porta il tuo team, o scrivici a <a href='mailto:ninja@48rails.it'>ninja@48rails.it</a> se cerchi una squadra cui aggregarti.</p>"
       social_desc_html: "<p>Segui <a href='http://twitter.com/48rails' target: '_blank'>@48rails</a> per rimanere aggiornato, e twitta con l&#39;hashtag ufficiale</p>"
       become_sponsor: "Diventa nostro sponsor"
       sponsorship_desc_html: "<p>Due eventi al prezzo di uno:</p><p>Per la prima volta in Italia i migliori sviluppatori Rails parteciperanno insieme al RailsRumble, una delle più famose coding competition internazionali, ampiamente pubblicizzata e discussa in rete.</p><p>Secondo, ma non meno importante: l&#39;opportunità di venire in contatto con alcuni tra i più importanti sviluppatori Ruby e Ruby on Rails che si muovono nel panorama italiano (e oltre!)</p><p>Il tuo logo verr&agrave; inserito nel sito e sarai menzionato durante l&#39;hackathon. </p>"
-      become_sponsor_button: "Diventa sponsor di 48 rails"
+      become_sponsor_button: "Diventa sponsor di 48rails"
       sponsor_location_desc: "Aiutaci a coprire le spese per la nostra fantastica location: un intero edificio riservato, con spazi per lavorare, mangiare e  (di tanto in tanto) riposare."
       sponsor_food_and_coffee: "Cibo & Caffè"
       sponsor_food_and_coffee_desc: "Avete idea di quanto possano essere famelici dei ninja dev mentre lavorano? 48h sono lunghe, avremo bisogno di cibo, snack, bevande e soprattutto… caffeina!"

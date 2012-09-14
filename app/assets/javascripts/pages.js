@@ -8,6 +8,9 @@ $(document).ready( function() {
   flowers();
     
   setInterval('animation()', t);
+  
+  $('#lang_selector a').tooltip({trigger: 'hover', placement: 'left'})
+  
 })
 
 function flowers() { 
