@@ -22,7 +22,7 @@
 
   
        
-  %body
+  %body.animations
     %section{role: 'header'}      
       %div
         %header
@@ -33,9 +33,10 @@
             %small on
             %span._rails> rails 
                
-        %article
-          %h2.pitch=t 'layout.when'
-          %h2.pitch=t 'layout.pitch'
+        %h2.pitch
+          %small=t 'layout.when'
+          %br/
+          =t 'layout.pitch'
         
         
         %p#lang_selector
@@ -51,6 +52,22 @@
             = image_tag 'english.png', lang: 'en', class: 'selected'
                   
     
+      %section.timeline
+        
+        %div          
+          %article.current
+            %header=t 'layout.registration_48rails_date_html'
+            %p=t 'layout.registration_48rails_what_html'
+              
+              
+          %article.future
+            %header=t 'layout.registration_railsrumble_date_html'
+            %p=t 'layout.registration_railsrumble_what_html'
+          
+          %article.future
+            %header=t 'layout.hack_date_html'
+            %p=t 'layout.hack_what_html'
+          
     %section{role: 'main'}
       %div
         = yield

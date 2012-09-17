@@ -15,7 +15,13 @@ en:
     email_us_at:  "For any information email us at"
     tweet_us_at:  "Or tweet us at"
     staff_call:   "Join the organizers, help create a better event!"
-
+    registration_48rails_date_html: "Up to Septemper 30th"
+    registration_48rails_what_html: "Ninjas registration to 48rails <br/>and teambuilding on our <a href='http://www.facebook.com/groups/48rails/' target='_blank'>facebook group</a>"     
+    registration_railsrumble_date_html: "1 &rightarrow; 7 October"
+    registration_railsrumble_what_html: "Register your team to RailsRumble"   
+    hack_date_html: "Oct. 13th-14th"
+    hack_what_html: "Hack!"  
+    
   pages:
 
     index:
@@ -41,3 +47,6 @@ en:
       sponsor_food_and_coffee_desc: "Ninja developers become super hungry after some hours of coding! 48h is a long time, we definitely need a lot of food, snacks, drinks and… coffee!"
       sponsor_prizes: "Prizes"
       sponsor_prizes_desc: "Does your company have a public API and want to put a prize for the best hack? Contact us, you'll be amazed!"
+      
+      our_sponsors: "Our sponsor"
+      want_to_sponsor_html: "Want to be one of our amazing sponsors? Write us at <a href='mailto:sponsor@48rails.it'>sponsor@48rails.it</a>"  

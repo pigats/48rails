@@ -74,6 +74,39 @@
   50%
     +rotate(-180deg)
 
+
+body.animations      
+      
+  > section[role=header] > div > header h1 
+  
+    .ninja
+      +transform-origin(35px,0,0)
+      +animation(spinning_kick 3s 1)      
+      
+    ._4
+      +animation(kicked 3s 1) 
+      
+  > section[role=main]   
+  
+    .social .ninja
+      +transform-origin(83px, 0)
+      +animation(pendulum 3s infinite)    
+      
+    footer
+      
+      .ninja.rails
+        +animation(flying_kick 3s infinite)
+
+      .ninja.ruby
+        +animation(throw 3s infinite)
+
+      .shuriken              
+        +animation(shuriken 3s infinite)
+
+      .flower
+        +animation(flower 10s infinite)
+
+
 body
   +background(linear-gradient(black #001848))
   
@@ -81,7 +114,7 @@ body
     background: white
     text-align: center
         
-    header
+    div > header
       +perspective(500)
       
       h1          
@@ -96,29 +129,56 @@ body
           position: relative
           left: 25px
           vertical-align: sub
-          +transform-origin(35px,0,0)
-          +animation(spinning_kick 3s 1)                      
+                      
 
         ._4
           display: inline-block
           height: 1em
           +transform-origin(100%,100%)
           +transform(translate(5px, -30px) rotate(10deg))
-          +animation(kicked 3s 1)
+
           
         small
           vertical-align: middle
           +text-shadow(-1px -.5px black)
+          
+    h2.pitch
+    
+      small
+        color: rgb(178,31,34)
           
     #lang_selector
       
       a:hover
         text-decoration: none
       
-
+    section.timeline      
+      +background(linear-gradient(left, rgb(178,31,34) 50%, #ddd 50%))
+         
+      article
+        
+        &.current, &.current a
+          color: white
+          background: rgb(178,31,34)
+          
+          header
+            @extend h2
+                  
+          &:before
+            border-left-color: rgb(178,31,34)
+          
+        &:not(.current)
+          
+          header
+            @extend h3
+            white-space: nowrap
+        
+          header, p
+            opacity: .5  
+            
+              
     
-    
-  section[role=main] 
+  > section[role=main] 
     color: #d9dade
     background: image_url('landscape.png') no-repeat bottom center 
     border-bottom: 5px solid lighten(rgb(2,65,35), 2%)   
@@ -153,45 +213,41 @@ body
       .ninja
         margin-top: -200px
         z-index: 0
-        +transform-origin(83px, 0)
-        +animation(pendulum 3s infinite)
        
     .sponsors
     
       article
         
         header
-          display: inline-block        
-          
-          &:after
-            font-size: .8em
+          font-weight: lighter
+          text-align: center
+          font-size: 1em
       
       .platinum
+        
+        
                
         img
                     
-        header &:after
-          content: '\00a0\2738\00a0\2738\00a0\2738\00a0\2738'
-          color: #e5e4e2
-
+        header 
           
       .gold header
         
-        &:after
-          content: '\00a0\2738\00a0\2738\00a0\2738'
-          color: #ffd700 
+        //&:after
+        //  content: '\00a0\2738\00a0\2738\00a0\2738'
+        //  color: #ffd700 
         
       .silver header
 
-        &:after
-          content: '\00a0\2738\00a0\2738'
-          color: #c0c0c0
+        //&:after
+        //  content: '\00a0\2738\00a0\2738'
+        //  color: #c0c0c0
         
       .bronze header
 
-        &:after
-          content: '\00a0\2738'
-          color: #cd7f32
+        //&:after
+        //  content: '\00a0\2738'
+        //  color: #cd7f32
         
       .media header
         //color: lighten(rgb(2,65,35), 25%)
@@ -205,15 +261,16 @@ body
       .ninja.rails
         left: 0
         bottom: 20px
-        +animation(flying_kick 3s infinite)
         
       .ninja.ruby
         bottom: 80px
-        +animation(throw 3s infinite)
+        right: 50px
         
       .shuriken
-        +animation(shuriken 3s infinite)
-          
+        bottom: 150px
+        right: 130px
+        width: 20px
+        height: 20px          
         
       .dynamite
         left: 160px
@@ -235,7 +292,6 @@ body
         z-index: 1
         
       .flower
-        +animation(flower 10s infinite)
         
         
             
@@ -275,7 +331,7 @@ body
       margin-left: 0
       
       
-  article
+  p, ul
 
     a, a:hover
       color: #d9dade

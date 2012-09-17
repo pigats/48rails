@@ -4,9 +4,7 @@ $(document).ready( function() {
   f = o.clone();
   o.hide();
   target = $('[role=main] footer');
-  
-  flowers();
-    
+      
   setInterval('animation()', 1000);
   
   $('#lang_selector a').tooltip({trigger: 'hover', placement: 'left'})
@@ -27,11 +25,12 @@ var counter = 0;
 
 function animation() {
   timer_s1()
-  if(counter < 2) {
-    counter += 1
-  } else {
-    counter = 0;
-    flowers();
-  }
-  
+  if ($('body').hasClass('animations')) {
+    if(counter < 2) {
+      counter += 1
+    } else {
+      counter = 0;
+      flowers();
+    }
+  }  
 }

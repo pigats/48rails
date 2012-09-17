@@ -14,7 +14,7 @@ body
   
   > section[role=header]
         
-    header
+    div > header
       padding-top: 18px
       position: relative
 
@@ -40,12 +40,46 @@ body
           
           &:hover
             z-index: 2
+     
+    h2.pitch
+      +span-columns(11)
+      margin: -1.5em 0 36px 0
       
-    article
-      margin: 0 
-      +clearfix
+    section.timeline
+      $height: 90px
+      $color: #ddd
       
-    
+      height: $height
+      
+      article
+          
+        &:first-of-type
+          +span-columns(6)
+         
+        &:nth-of-type(2)
+          +span-columns(3)  
+          
+        &:last-of-type
+          +span-columns(2)
+          +omega      
+        
+        &:not(:last-of-type)
+          padding-right: $height / 2 
+          +box-sizing(border-box)
+          
+          &:before
+            display: block
+            width: 0 !important
+            float: right
+            height: 0 !important
+            border-top: $height / 2 solid white
+            border-bottom: $height / 2 solid white
+            border-left-width: $height / 2 
+            border-left-style: solid
+            border-left-color: #ddd
+            margin-right: -$height / 2
+            content: ' '        
+
   
   > section[role=main]
     padding: 36px 0 0 
@@ -71,6 +105,14 @@ body
         padding: 9px 0 9px 0
         margin: 4px 0 5px 0
         
+        header
+          display: inline-block
+          width: 1.2em
+          margin-right: 1em
+          line-height: 3em
+          vertical-align: text-top
+          +rotate(-90deg)
+        
         img
           vertical-align: middle
         
@@ -86,6 +128,7 @@ body
           +omega()
           
         &.platinum
+          margin-top: 18px
           border-bottom: 1px dashed #d9dade
         
         &.bronze
