@@ -27,8 +27,9 @@
   -#  -# %input{type: 'submit', value: 'Tienimi informato'}
   -#  -# %span (non ci sogneremmo mai di spammare dei ninja)
   
-  :plain
-    <div style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.com/tickets-external?eid=2126575645&ref=etckt" frameborder="0" height="244" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Online event registration</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://http://48rails.eventbrite.com?ref=etckt">48rails</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com?ref=etckt">Eventbrite</a></div></div>
+  - if Rails.env.production?
+    :plain
+      <div style="width:100%; text-align:left;" ><iframe  src="http://www.eventbrite.com/tickets-external?eid=2126575645&ref=etckt" frameborder="0" height="244" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Online event registration</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://http://48rails.eventbrite.com?ref=etckt">48rails</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com?ref=etckt">Eventbrite</a></div></div>
 
 
 
@@ -47,25 +48,51 @@
     =image_tag 'ninja_dev.png', class: 'ninja'
 
 %section.sponsors
-  %header=t '.become_sponsor'
-  =t '.sponsorship_desc_html'
+  %header I nostri sponsor
+  
+  %article.platinum
+    %header Platinum
+    = image_tag 'sponsor/mikamai.png'
+    
+  %article.gold
+    %header Gold
+    
+  %article.silver
+    %header Silver
+    
+  %article.bronze
+    %header Bronze
+    = image_tag 'sponsor/pragprog.png'
+    = image_tag 'sponsor/innoteam.png'
+    
+  %article.media
+    %header 
+      Media Partner
+      %i.icon-bullhorn.icon-white
+    = image_tag 'sponsor/webdebs.png'
+    = image_tag 'sponsor/tag.png'
+    = image_tag 'sponsor/rubysocialclub.png'
 
-  %p.pitch
-    %a.btn.btn-large{href: 'mailto:sponsor@48rails.it?subject=Sponsorship'}
-      %i.icon-heart 
-      =t '.become_sponsor_button'
-    
-  %article
-    = image_tag 'location.png'
-    %header Location
-    %p=t '.sponsor_location_desc'
-    
-  %article
-    = image_tag 'caffeine.png'
-    %header=t '.sponsor_food_and_coffee'
-    %p=t '.sponsor_food_and_coffee_desc'
-    
-  %article
-    = image_tag 'prize.png'
-    %header=t '.sponsor_prizes'
-    %p=t '.sponsor_prizes_desc'
+  
+  -#=t '.become_sponsor'
+  -#=t '.sponsorship_desc_html'
+  -#
+  -#%p.pitch
+  -#  %a.btn.btn-large{href: 'mailto:sponsor@48rails.it?subject=Sponsorship'}
+  -#    %i.icon-heart 
+  -#    =t '.become_sponsor_button'
+  -#  
+  -#%article
+  -#  = image_tag 'location.png'
+  -#  %header Location
+  -#  %p=t '.sponsor_location_desc'
+  -#  
+  -#%article
+  -#  = image_tag 'caffeine.png'
+  -#  %header=t '.sponsor_food_and_coffee'
+  -#  %p=t '.sponsor_food_and_coffee_desc'
+  -#  
+  -#%article
+  -#  = image_tag 'prize.png'
+  -#  %header=t '.sponsor_prizes'
+  -#  %p=t '.sponsor_prizes_desc'

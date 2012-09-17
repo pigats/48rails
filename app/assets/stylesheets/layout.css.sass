@@ -65,8 +65,36 @@ body
       margin-bottom: 500px
  
       img
-        margin-bottom: 18px
+        margin-right: 2em
+        
+      article  
+        padding: 9px 0 9px 0
+        margin: 4px 0 5px 0
+        
+        img
+          vertical-align: middle
+        
+        &.platinum, &.bronze, &.media
+          +span-columns(11) 
+          +suffix(0)
+         
+        &.gold, &.silver
+          +span-columns(5)
           
+        &.silver
+          +suffix(0)
+          +omega()
+          
+        &.platinum
+          border-bottom: 1px dashed #d9dade
+        
+        &.bronze
+          border-top: 1px dashed #d9dade
+          border-bottom: 1px dashed #d9dade
+
+          
+          
+                            
     .rsvp
       text-align: center    
 
@@ -99,7 +127,7 @@ body
   > footer
     padding: 18px 0 0
     
-    > div:not(#timer)
+    > div:not(.countdown)
       +container                  
 
   .ninja

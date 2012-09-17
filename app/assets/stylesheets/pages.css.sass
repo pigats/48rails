@@ -155,7 +155,48 @@ body
         z-index: 0
         +transform-origin(83px, 0)
         +animation(pendulum 3s infinite)
+       
+    .sponsors
+    
+      article
         
+        header
+          display: inline-block        
+          
+          &:after
+            font-size: .8em
+      
+      .platinum
+               
+        img
+                    
+        header &:after
+          content: '\00a0\2738\00a0\2738\00a0\2738\00a0\2738'
+          color: #e5e4e2
+
+          
+      .gold header
+        
+        &:after
+          content: '\00a0\2738\00a0\2738\00a0\2738'
+          color: #ffd700 
+        
+      .silver header
+
+        &:after
+          content: '\00a0\2738\00a0\2738'
+          color: #c0c0c0
+        
+      .bronze header
+
+        &:after
+          content: '\00a0\2738'
+          color: #cd7f32
+        
+      .media header
+        //color: lighten(rgb(2,65,35), 25%)
+      
+         
     footer
         
       img
@@ -217,36 +258,6 @@ body
     @extend .lead
     font-size: 2em
     text-align: center
-    
-    
-  #timer 
-    width: 827px
-    margin: 18px auto 36px
-    +clearfix
-  
-    .countdown 
-      float: left
-      width: 91px
-      height: 88px
-      overflow: hidden
-      margin-bottom: 4px
-    
-      img
-        position: relative
-    
-      &.points
-        width: 124px
-        
-    p
-      width: 215px
-      float: left
-      padding: 0 50px 0 0
-      text-align: right
-      +box-sizing(border-box)
-      
-      &:last-of-type
-        width: 182px
-        padding: 0 17px 0 0
         
       
   > footer
@@ -254,7 +265,7 @@ body
     +background(linear-gradient(top, #3d3028 0%, darken(#a08855, 15%) 50%, #544741 95%))
     color: #d9dade
     
-    > div:not(#timer)
+    > div:not(.countdown)
       background: image_url('dragon.png') no-repeat right top
     
     .dexter

@@ -1,0 +1,92 @@
+@import compass
+@import animation
+
+$width: 70px
+$height: 92px  
+$hinge: 2px
+$border: $hinge*2
+$margin-right: 5px
+$margin-between-couples: $margin-right*5 
+
++keyframes(flip)
+  0%
+    +rotateX(0)
+  
+  100%
+    +rotateX(-180deg)
+    
+
+.countdown
+  width: ($width + $border*2)*8 + $margin-right*7 + $margin-between-couples * 3
+  margin: 0 auto 36px 
+  +clearfix 
+  
+  .number
+    width: $width
+    height: $height + $hinge
+    float: left
+    border: $border solid white
+    +border-radius(7px)
+    text-align: center
+    +perspective(250)
+    
+    &:not(:last-of-type)
+      margin-right: $margin-right
+      
+    &.space
+      margin-right: $margin-between-couples
+    
+    div
+      font-size: $height
+      width: $width
+      height: $height / 2
+      color: white
+    
+    .top
+      margin-top: -$height / 2
+      border-bottom: $hinge solid grey
+      
+    .top, .bottom, .front, .back  
+      background: black
+
+    .top, .bottom
+      overflow: hidden
+    
+    .top, .front
+      line-height: $height
+      
+    .bottom, .back
+      line-height: 0
+
+      
+    .flip
+      height: $height / 2
+      +transform-style(preserve-3d) 
+      +transform-origin(0,$height / 2 + $hinge / 2 ,0)
+      +rotateX(0)
+      
+      div
+        overflow: hidden
+        
+      .front
+        +translateZ(1px)        
+      
+      .back
+        margin-top: -$height / 2
+        +rotateX(180deg)      
+      
+    &.flipping
+    
+      .flip
+        +rotateX(-180deg)    
+        +animation(flip .8s 1) 
+        
+  p
+    width: ($width + $border*2)*2
+    float: left
+    text-align: right
+    margin-top: 5px
+    margin-right: $margin-between-couples + $margin-right
+    
+    &:last-of-type
+      margin-right: 0   
