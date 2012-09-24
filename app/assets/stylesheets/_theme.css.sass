@@ -1,0 +1,29 @@
+@import layout
+@import bootstrap
+
+body
+  +background(linear-gradient(black #001848))
+  font-size: 13px
+       
+section[role=main]      
+  border-bottom: 5px solid lighten(rgb(2,65,35), 2%)    
+  color: #999
+  
+  header, .pitch
+    color: #bbb
+    
+article header
+  @extend h3
+  font-weight: normal
+  margin-bottom: 9px 
+
+section header
+  @extend h2
+  font-weight: normal
+  margin-bottom: 9px 
+
+.pitch
+  @extend .lead
+  font-size: 2em
+  text-align: center
+  +reset-columns

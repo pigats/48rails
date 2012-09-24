@@ -1,0 +1,39 @@
+@import compass
+@import susy
+
+$total-columns  : 11
+$column-width   : 4em
+$gutter-width   : 1em
+$grid-padding   : $gutter-width
+ 
+section 
+
+  > div
+    +container 
+
+  section
+    +clearfix
+    clear: both
+ 
+section[role=header]
+  padding-top: 18px
+  +perspective(500)
+
+section[role=main]
+  padding: 36px 0 0
+  
+body > footer
+  padding: 18px 0 0
+    
+  > div:not(.countdown)
+    +container  
+  
+article.third
+  +span-columns(3) 
+  
+  &:not(:last-of-type)  
+    +suffix(1)  
+            
+  &:last-of-type
+    +omega
+    

@@ -23,34 +23,21 @@
   
        
   %body.animations
-    %section{role: 'header'}      
-      %div
-        %header
-          %h1
-            =image_tag 'ninja_logo.png', class: 'ninja'
-            %span._4.animated> 4
-            %span._8> 8
-            %small on
-            %span._rails> rails 
-               
-        %h2.pitch
-          %small=t 'layout.when'
-          %br/
-          =t 'layout.pitch'
-        
-        
-        %p#lang_selector
-          - if I18n.locale == :it
-            = image_tag 'italian.png', lang: 'it', class: 'selected'
-            %a{href: "#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=en", title: 'switch to English', lang: 'en'} 
-              = image_tag 'english.png', lang: 'en'
 
-          
-          - else
-            %a{href: "#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=it", title: 'passa all\'Italiano', lang: 'it'}
-              = image_tag 'italian.png', lang: 'it'
-            = image_tag 'english.png', lang: 'en', class: 'selected'
-                  
+    %section{role: 'header'}      
+      %header
+        %h1
+          =image_tag 'ninja_logo.png', class: 'ninja'
+          %span._4.animated> 4
+          %span._8> 8
+          %small on
+          %span._rails> rails 
+             
+      %h2.pitch
+        %small=t 'layout.when'
+        %br/
+        =t 'layout.pitch'
+                        
     
       %section.timeline
         
@@ -68,89 +55,18 @@
             %header=t 'layout.hack_date_html'
             %p=t 'layout.hack_what_html'
           
-    %section{role: 'main'}
+    %section{role: 'main', class: controller.action_name}
       %div
         = yield
 
-        %footer
-          
-          = image_tag 'tree.png', class: 'tree'
-          = image_tag 'ninja_rails.png', class: 'ninja rails'
-          = image_tag 'dynamite.png', class: 'dynamite'
-          = image_tag 'ninja_ruby.png', class: 'ninja ruby'
-          = image_tag 'shuriken.png', class: 'shuriken'
-          = image_tag 'flower.png', class: 'flower' 
-          
-          %h2.pitch=t 'layout.countdown'
-
 
     %footer
-      .countdown
-        .number#d10
-          .flip
-            .front
-            .back
-          .fixed.top
-          .fixed.bottom
-
-        .number#d1.space
-          .flip
-            .front
-            .back
-          .fixed.top
-          .fixed.bottom          
-        
-        .number#h10
-          .flip
-            .front
-            .back
-          .fixed.top
-          .fixed.bottom
-
-        .number#h1.space
-          .flip
-            .front
-            .back
-          .fixed.top
-          .fixed.bottom
-
-        .number#m10
-          .flip
-            .front
-            .back
-          .fixed.top
-          .fixed.bottom
-
-        .number#m1.space
-          .flip
-            .front
-            .back
-          .fixed.top
-          .fixed.bottom
-
-        .number#s10
-          .flip
-            .front
-            .back
-          .fixed.top
-          .fixed.bottom
-
-        .number#s1
-          .flip
-            .front
-            .back
-          .fixed.top
-          .fixed.bottom
-          
-        %p=t 'layout.days'
-        %p=t 'layout.hours'
-        %p=t 'layout.minutes'
-        %p=t 'layout.seconds'         
+      = render 'layouts/countdown'     
 
     
       %div
         
-        %article
+        %article.third
           %header About
           %p 
             = image_tag 'dexter.png', class: 'dexter'
@@ -176,7 +92,7 @@
               &ndash; rails ninja
             
           
-        %article
+        %article.third
 
           %header=t 'layout.contact_us'
           %p 
@@ -189,5 +105,18 @@
             
           %p=t 'layout.staff_call'
                       
-        %article
+        %article.third
+    
+    
+    %p#lang_selector
+      - if I18n.locale == :it
+        = image_tag 'italian.png', lang: 'it', class: 'selected'
+        %a{href: "#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=en", title: 'switch to English', lang: 'en'} 
+          = image_tag 'english.png', lang: 'en'
+
+      
+      - else
+        %a{href: "#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=it", title: 'passa all\'Italiano', lang: 'it'}
+          = image_tag 'italian.png', lang: 'it'
+        = image_tag 'english.png', lang: 'en', class: 'selected'
   

@@ -1,0 +1,22 @@
+=t '.become_sponsor'
+=t '.sponsorship_desc_html'
+
+%p.pitch
+  %a.btn.btn-large{href: 'mailto:sponsor@48rails.it?subject=Sponsorship'}
+    %i.icon-heart 
+    =t '.become_sponsor_button'
+  
+%article
+  = image_tag 'location.png'
+  %header Location
+  %p=t '.sponsor_location_desc'
+  
+%article
+  = image_tag 'caffeine.png'
+  %header=t '.sponsor_food_and_coffee'
+  %p=t '.sponsor_food_and_coffee_desc'
+  
+%article
+  = image_tag 'prize.png'
+  %header=t '.sponsor_prizes'
+  %p=t '.sponsor_prizes_desc'

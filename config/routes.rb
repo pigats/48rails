@@ -1,5 +1,9 @@
 Pip48rails::Application.routes.draw do
 
+  get 'about' => 'pages#about'
+  get 'ninjas' => 'pages#participants'
+  get 'sponsors' => 'pages#sponsors'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

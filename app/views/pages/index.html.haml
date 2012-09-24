@@ -1,16 +1,17 @@
-%article
-  %header=t '.mission_title'
-  =t '.mission_desc_html'
-
-%article
-  %header 
-    Hackathon
-    %sup> 2
-  =t '.hackathon_desc_html'
-    
-%article
-  %header Distraction-free   
-  =t '.distraction_free_desc_html'  
+%section
+  %article.third
+    %header=t '.mission_title'
+    =t '.mission_desc_html'
+  
+  %article.third
+    %header 
+      Hackathon
+      %sup> 2
+    =t '.hackathon_desc_html'
+      
+  %article.third
+    %header Distraction-free   
+    =t '.distraction_free_desc_html'  
 
 %section.rsvp 
   = image_tag 'ninja+railsrumble.png'
@@ -23,16 +24,16 @@
 
 %section.social
   
-  %article
+  %article.third
     %header=t '.participants'
     =t '.participants_desc_html'
       
-  %article 
+  %article.third 
     %header Social 
     =t '.social_desc_html'
     %h1 #48rails
 
-  %article
+  %article.third
     =image_tag 'ninja_dev.png', class: 'ninja'
 
 %section.sponsors
@@ -60,26 +61,13 @@
     = link_to( image_tag('sponsor/rubysocialclub.png'), 'http://www.rubysocialclub.com/')
     = link_to( image_tag('sponsor/whymca.png'), 'http://www.whymca.org/')
   
+%footer
   
-  -#=t '.become_sponsor'
-  -#=t '.sponsorship_desc_html'
-  -#
-  -#%p.pitch
-  -#  %a.btn.btn-large{href: 'mailto:sponsor@48rails.it?subject=Sponsorship'}
-  -#    %i.icon-heart 
-  -#    =t '.become_sponsor_button'
-  -#  
-  -#%article
-  -#  = image_tag 'location.png'
-  -#  %header Location
-  -#  %p=t '.sponsor_location_desc'
-  -#  
-  -#%article
-  -#  = image_tag 'caffeine.png'
-  -#  %header=t '.sponsor_food_and_coffee'
-  -#  %p=t '.sponsor_food_and_coffee_desc'
-  -#  
-  -#%article
-  -#  = image_tag 'prize.png'
-  -#  %header=t '.sponsor_prizes'
-  -#  %p=t '.sponsor_prizes_desc'
+  = image_tag 'tree.png', class: 'tree'
+  = image_tag 'ninja_rails.png', class: 'ninja rails'
+  = image_tag 'dynamite.png', class: 'dynamite'
+  = image_tag 'ninja_ruby.png', class: 'ninja ruby'
+  = image_tag 'shuriken.png', class: 'shuriken'
+  = image_tag 'flower.png', class: 'flower' 
+  
+  %h2.pitch=t 'layout.countdown'

@@ -1,0 +1,104 @@
+@import compass
+@import animation
+
++keyframes(pendulum)
+  0%, 100%
+    +rotate(5deg)
+  50%
+    +rotate(-5deg)
+
+
++keyframes(flying_kick)
+  0%, 100%
+    +translate(-100px, -10px)
+  
+  30%
+    +translate(-100px, -10px)
+   
+  45%
+    +translate(-80px, -100px)  
+  
+  60%
+    +translate(0, 0)
+
+
++keyframes(spinning_kick)
+  0%, 60%, 100%
+    +rotateY(0)
+
+  57%
+    +rotateY(80deg)
+  
+  
++keyframes(kicked)     
+  0%, 59.99%
+    +transform(translate(0,0) rotate(0))  
+  60%, 100%
+    +transform(translate(5px, -30px) rotate(10deg))
+    
+
++keyframes(shuriken)
+  0%, 19.1%, 60.1%, 100%
+    bottom: 150px
+    right: 130px
+    width: 20px
+    height: 20px
+    
+  20%
+    bottom: 150px
+    right: 130px
+    width: 20px
+    height: 20px
+  
+  
+  60%
+    bottom: 0
+    right: 800px
+    width: 50px
+    height: 50px
+    
++keyframes(throw)
+  0%, 20%, 60%, 100%
+    right: 50px
+  
+  25%
+    right: 0
+
++keyframes(flower)
+  0%, 100%
+    +rotate(0deg)
+    
+  50%
+    +rotate(-180deg)
+    
+    
+body.animations      
+      
+  > section[role=header] > header h1 
+  
+    .ninja
+      +transform-origin(35px,0,0)
+      +animation(spinning_kick 3s 1)      
+      
+    ._4
+      +animation(kicked 3s 1) 
+      
+  > section[role=main]   
+  
+    .social .ninja
+      +transform-origin(83px, 0)
+      +animation(pendulum 3s infinite)    
+      
+    footer
+      
+      .ninja.rails
+        +animation(flying_kick 3s infinite)
+
+      .ninja.ruby
+        +animation(throw 3s infinite)
+
+      .shuriken              
+        +animation(shuriken 3s infinite)
+
+      .flower
+        +animation(flower 10s infinite)
