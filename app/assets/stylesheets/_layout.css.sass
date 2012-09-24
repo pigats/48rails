@@ -7,13 +7,13 @@ $gutter-width   : 1em
 $grid-padding   : $gutter-width
  
 section 
-
+    
   > div
     +container 
+    
+    section
+      +span-columns(11)
 
-  section
-    +clearfix
-    clear: both
  
 section[role=header]
   padding-top: 18px
