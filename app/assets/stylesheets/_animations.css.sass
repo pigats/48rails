@@ -72,35 +72,34 @@
   50%
     +rotate(-180deg)
  
-@media screen and (min-width: 481px)
     
-  body.animations      
-        
-    > section[role=header] > header h1 
-    
-      .ninja
-        +transform-origin(35px,0,0)
-        +animation(spinning_kick 3s 1)      
-        
-      ._4
-        +animation(kicked 3s 1) 
-        
-    > section[role=main]   
-    
-      .social .ninja
-        +transform-origin(83px, 0)
-        +animation(pendulum 3s infinite)    
-        
-      footer
-        
-        .ninja.rails
-          +animation(flying_kick 3s infinite)
+body.animations      
+      
+  > section[role=header] > header h1 
   
-        .ninja.ruby
-          +animation(throw 3s infinite)
+    .ninja
+      +transform-origin(35px,0,0)
+      +animation(spinning_kick 3s 1)      
+      
+    ._4
+      +animation(kicked 3s 1) 
+      
+  > section[role=main]   
   
-        .shuriken              
-          +animation(shuriken 3s infinite)
-  
-        .flower
-          +animation(flower 10s infinite)
+    .social .ninja
+      +transform-origin(83px, 0)
+      +animation(pendulum 3s infinite)    
+      
+    footer
+      
+      .ninja.rails
+        +animation(flying_kick 3s infinite)
+
+      .ninja.ruby
+        +animation(throw 3s infinite)
+
+      .shuriken              
+        +animation(shuriken 3s infinite)
+
+      .flower
+        +animation(flower 10s infinite)
