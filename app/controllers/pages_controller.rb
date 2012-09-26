@@ -6,6 +6,14 @@ class PagesController < ApplicationController
   end
   
   def participants
+    fb = Koala::Facebook::API.new
+    
+    @participants = {}
+    Clan.all.each do |clan|      
+      
+      @participants[clan] = clan.ninjas
+    end
+  
   end
   
   def sponsors

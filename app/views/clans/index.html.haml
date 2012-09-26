@@ -1,0 +1,17 @@
+%section
+  %header
+    I clan di 48rails
+  
+  - @clans.each do |clan|
+    %article
+      %header= clan.name
+      
+    %ul
+      - clan.ninjas.each do |ninja| 
+        = image_tag ninja.profile_image_url()
+        = ninja.name
+        = link_to "twitter", "http://twitter.com/#{ninja.tw}" unless ninja.tw.empty?
+
+%br
+
+= link_to 'New Clan', new_clan_path

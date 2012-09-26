@@ -31,7 +31,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'haml'
+gem 'haml-rails'
+gem 'twitter'
+gem 'koala'
 
 gem 'rails-i18n'
 

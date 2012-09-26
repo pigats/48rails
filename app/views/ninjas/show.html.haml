@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @ninja.name
+%p
+  %b Tw:
+  = @ninja.tw
+%p
+  %b Fb:
+  = @ninja.fb
+%p
+  %b Desc:
+  = @ninja.desc
+%p
+  %b Clan:
+  = @ninja.clan_id
+
+= link_to 'Edit', edit_clan_ninja_path(@clan, @ninja)
+\|
+= link_to 'Back', clan_ninjas_path(@clan)

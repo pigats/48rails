@@ -1,0 +1,14 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @clan.name
+%p
+  %b Ensign:
+  = @clan.ensign
+
+= link_to 'Add ninja', new_clan_ninja_path(@clan)
+\|
+= link_to 'Edit', edit_clan_path(@clan)
+\|
+= link_to 'Back', clans_path

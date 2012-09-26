@@ -1,0 +1,29 @@
+%h1 Listing ninjas
+
+= @clan
+
+%table
+  %tr
+    %th Name
+    %th Tw
+    %th Fb
+    %th Desc
+    %th Clan
+    %th
+    %th
+    %th
+
+  - @ninjas.each do |ninja|
+    %tr
+      %td= ninja.name
+      %td= ninja.tw
+      %td= ninja.fb
+      %td= ninja.desc
+      %td= ninja.clan_id
+      %td= link_to 'Show', clan_ninja_path(@clan, ninja)
+      %td= link_to 'Edit', edit_clan_ninja_path(@clan, ninja)
+      %td= link_to 'Destroy', clan_ninja_path(@clan, ninja), method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Ninja', new_clan_ninja_path(@clan)

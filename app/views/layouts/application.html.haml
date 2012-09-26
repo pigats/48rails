@@ -55,7 +55,7 @@
             %header=t 'layout.hack_date_html'
             %p=t 'layout.hack_what_html'
           
-    %section{role: 'main', class: controller.action_name}
+    %section{role: 'main', class: "#{controller.controller_name}_#{controller.action_name}"}
       %div
         = yield
 

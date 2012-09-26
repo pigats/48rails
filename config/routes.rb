@@ -1,7 +1,6 @@
 Pip48rails::Application.routes.draw do
 
   get 'about' => 'pages#about'
-  get 'ninjas' => 'pages#participants'
   get 'sponsors' => 'pages#sponsors'
 
   # The priority is based upon order of creation:
@@ -17,6 +16,10 @@ Pip48rails::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  
+  resources :clans do 
+    resources :ninjas
+  end
 
   # Sample resource route with options:
   #   resources :products do

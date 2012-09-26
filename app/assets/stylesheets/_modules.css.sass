@@ -194,7 +194,7 @@ section.timeline
 
 // HILLS //////////////////////////////////////////////////////////////////////
 
-section[role=main].index
+section[role=main].pages_index
   background: image_url('landscape.png') no-repeat bottom center
 
   >div
@@ -246,8 +246,12 @@ section[role=main].index
     
 // NINJA //////////////////////////////////////////////////////////////////////
 
-.ninja
-  +transition-property(all)
+section.participants
+  
+  li
+    position: relative    
+  
+  
   
   
 // FOOTER //////////////////////////////////////////////////////////////////////
@@ -269,3 +273,6 @@ body > footer
   a, a:hover
     color: #d9dade
     text-decoration: underline
+    
+    
+//
