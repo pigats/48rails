@@ -68,24 +68,75 @@ section[role=header]
 
 section.timeline
   height: 90px
+  overflow: hidden
   +background(linear-gradient(left, rgb(178,31,34) 50%, #ddd 50%))
+  
+  > div 
+    padding: 0
+    background: white
   
   article
     +box-sizing(border-box)
+    position: relative
+    background: #ddd
       
     &:first-of-type
-      +span-columns(6)
+      +span-columns(5)
+      &:after 
+        border-top: 50px solid transparent
+        border-bottom: 50px solid transparent
+        border-right: 50px solid #ddd
+        display: block
+        content: ' '
+        position: absolute
+        width: 0
+        height: 0
+        top: 40px
+        right: -13px
      
     &:nth-of-type(2)
-      +span-columns(3)  
+      +span-columns(4)
+      &:after 
+        border-top: 50px solid transparent
+        border-bottom: 50px solid transparent
+        border-right: 50px solid #ddd
+        display: block
+        content: ' '
+        position: absolute
+        width: 0
+        height: 0
+        top: -50px
+        left: -50px
       
     &:last-of-type
       +span-columns(2)
-      +omega      
+      height: 90px
+      +omega
+      &:after 
+        border-top: 50px solid transparent
+        border-bottom: 50px solid transparent
+        border-right: 50px solid #ddd
+        display: block
+        content: ' '
+        position: absolute
+        width: 0
+        height: 0
+        top: -50px
+        left: -50px
+      &:before 
+        border-top: 50px solid transparent
+        border-bottom: 50px solid transparent
+        border-right: 50px solid #ddd
+        display: block
+        content: ' '
+        position: absolute
+        width: 0
+        height: 0
+        top: 40px
+        left: -50px       
     
     &:not(:last-of-type)
-      padding-right: 45px 
-      
+      padding-right: 45px
       &:before
         display: block
         width: 0 !important
@@ -108,20 +159,25 @@ section.timeline
       
       header
         @extend h2
+        text-shadow: 1px 1px #000
               
       &:before
         border-left-color: rgb(178,31,34)
-          
+    
     &:not(.current)
       
       header
         @extend h3
         white-space: nowrap
+        text-shadow: 1px 1px #fff
     
       header, p
-        opacity: .5  
-
-
+        opacity: .5
+        
+    header
+      margin-top: 5px !important
+      
+      
 // SPONSOR //////////////////////////////////////////////////////////////////////
 
 
