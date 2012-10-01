@@ -11,14 +11,16 @@
     %ul
       - clan.ninjas.each do |ninja| 
         %li
-          - n = 'sword' #@ninjas[rand(0...@ninjas.size)]
+          - n = @ninjas[rand(0...@ninjas.size)]
           = image_tag "ninjas/ninja_#{n}.png", class: "ninja #{n}"
           .face{style: "background-image: url(#{ninja.profile_image_url}); background-position: #{ninja.x}px #{ninja.y}px"}
             
           %br/
           = ninja.name
-          = link_to "twitter", "http://twitter.com/#{ninja.tw}" unless ninja.tw.empty?
-
-%br
-
-= link_to 'New Clan', new_clan_path
+          
+          - if !ninja.tw.blank?
+            %br/
+            %small 
+              [ follow
+              = link_to "@#{ninja.tw}", "http://twitter.com/#{ninja.tw}" 
+              ]

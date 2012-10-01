@@ -322,17 +322,24 @@ section[role=main].pages_index
   
   article
     clear: both
+    margin: 36px 0
   
   ul
     list-style-type: none
+    +clearfix
   
   li
-    float: left 
+    display: inline-block
     position: relative
+    vertical-align: bottom
+    
+    &:not(:last-of-type)
+      margin-right: 20px
     
     .ninja
       position: relative
       z-index: 2
+      margin-bottom: 18px
     
     .face
       position: absolute 

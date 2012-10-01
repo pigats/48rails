@@ -1,4 +1,7 @@
 class ClansController < ApplicationController
+
+  before_filter :authenticate, :except => [:index]
+
   # GET /clans
   # GET /clans.json
   def index    

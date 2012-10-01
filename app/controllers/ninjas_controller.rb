@@ -1,4 +1,7 @@
 class NinjasController < ApplicationController
+
+  before_filter :authenticate
+
   # GET /ninjas
   # GET /ninjas.json
   def index
