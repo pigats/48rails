@@ -312,13 +312,40 @@ section[role=main].pages_index
     
 // NINJA //////////////////////////////////////////////////////////////////////
 
-section.participants
+.participants
+  
+  article
+    clear: both
+  
+  ul
+    list-style-type: none
   
   li
-    position: relative    
-  
-  
-  
+    float: left 
+    position: relative
+    
+    .ninja
+      position: relative
+      z-index: 2
+    
+    .face
+      position: absolute 
+      width: 60px
+      height: 60px
+      +border-radius(30px)
+      z-index: 1
+    
+    .ninja.crouched + .face
+      left: 50px
+      top: 5px 
+    
+    .ninja.kick + .face, .ninja.ruby + .face
+      left: 10px
+      top: 5px   
+      
+    .ninja.sword + .face
+      left: 20px
+      top: 50px
   
 // FOOTER //////////////////////////////////////////////////////////////////////
 

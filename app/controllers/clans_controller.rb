@@ -1,7 +1,7 @@
 class ClansController < ApplicationController
   # GET /clans
   # GET /clans.json
-  def index
+  def index    
     @clans = Clan.all
 
     respond_to do |format|

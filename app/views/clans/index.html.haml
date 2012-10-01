@@ -1,6 +1,8 @@
-%section
+%section.participants
   %header
     I clan di 48rails
+
+  - @ninjas = %w(sword ruby kick crouched)
   
   - @clans.each do |clan|
     %article
@@ -8,9 +10,14 @@
       
     %ul
       - clan.ninjas.each do |ninja| 
-        = image_tag ninja.profile_image_url()
-        = ninja.name
-        = link_to "twitter", "http://twitter.com/#{ninja.tw}" unless ninja.tw.empty?
+        %li
+          - n = 'sword' #@ninjas[rand(0...@ninjas.size)]
+          = image_tag "ninjas/ninja_#{n}.png", class: "ninja #{n}"
+          .face{style: "background-image: url(#{ninja.profile_image_url}); background-position: #{ninja.x}px #{ninja.y}px"}
+            
+          %br/
+          = ninja.name
+          = link_to "twitter", "http://twitter.com/#{ninja.tw}" unless ninja.tw.empty?
 
 %br
 
