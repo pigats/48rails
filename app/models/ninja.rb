@@ -2,7 +2,7 @@ require 'open-uri'
 require 'nokogiri'
 
 class Ninja < ActiveRecord::Base
-  attr_accessible :clan_id, :desc, :fb, :name, :tw, :in
+  attr_accessible :clan_id, :desc, :fb, :name, :tw, :in, :x, :y
   belongs_to :clan
  
   def profile_image_url
