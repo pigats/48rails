@@ -7,19 +7,19 @@
     %article
       %header= clan.name
       
-    %ul
-      - clan.ninjas.each do |ninja| 
-        %li
-          - n = @ninjas[rand(@ninjas.size)]
-          = image_tag "ninjas/ninja_#{n}.png", class: "ninja #{n}"
-          .face{style: "background-image: url(#{ninja.profile_image_url}); background-position: #{ninja.x}px #{ninja.y}px"}
-            
-          %br/
-          = ninja.name
-          
-          - if !ninja.tw.blank?
+      %ul
+        - clan.ninjas.each do |ninja| 
+          %li
+            - n = @ninjas[rand(@ninjas.size)]
+            = image_tag "ninjas/ninja_#{n}.png", class: "ninja #{n}"
+            .face{style: "background-image: url(#{ninja.profile_image_url}); background-position: #{ninja.x}px #{ninja.y}px"}
+              
             %br/
-            %small 
-              [ follow
-              = link_to "@#{ninja.tw}", "http://twitter.com/#{ninja.tw}" 
-              ]
+            = ninja.name
+            
+            - if !ninja.tw.blank?
+              %br/
+              %small 
+                [ follow
+                = link_to "@#{ninja.tw}", "http://twitter.com/#{ninja.tw}" 
+                ]

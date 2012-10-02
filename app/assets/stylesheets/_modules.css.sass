@@ -344,8 +344,12 @@ section[role=main].pages_index
 .participants
   
   article
-    clear: both
-    margin-bottom: 36px
+    +span-columns(11)
+    padding-bottom: 17px
+    margin-bottom: 18px
+  
+    &:not(:last-of-type)
+      border-bottom: 1px solid gray
   
   ul
     list-style-type: none
