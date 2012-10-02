@@ -47,4 +47,8 @@ it:
  
       our_sponsors: "I nostri sponsor"
       want_to_sponsor_html: "Vuoi essere uno dei nostri fantastici sponsor? Scrivici a <a href='mailto:sponsor@48rails.it'>sponsor@48rails.it</a>"   
-         
+ 
+  clans:
+      
+    index:
+      clans_title: "I Clan e i Ninja che hackeranno con noi"        

@@ -49,4 +49,9 @@ en:
       sponsor_prizes_desc: "Does your company have a public API and want to put a prize for the best hack? Contact us, you'll be amazed!"
       
       our_sponsors: "Our sponsor"
-      want_to_sponsor_html: "Want to be one of our amazing sponsors? Write us at <a href='mailto:sponsor@48rails.it'>sponsor@48rails.it</a>"  
+      want_to_sponsor_html: "Want to be one of our amazing sponsors? Write us at <a href='mailto:sponsor@48rails.it'>sponsor@48rails.it</a>" 
+      
+  clans:
+      
+    index:
+      clans_title: "Clans and Ninjas who will hack with us" 

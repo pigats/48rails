@@ -30,6 +30,29 @@ $red_current : rgb(178,31,34)
       &:hover
         z-index: 2
 
+
+// MENU //////////////////////////////////////////////////////////////////////
+
+nav[role=navigation]
+  
+  ul
+    list-style-type: none
+    
+    li
+      padding: 4px 10px 5px
+    
+    li:not(.date)
+      float: left
+      border-right: 1px solid gray
+      
+      &:first-of-type
+        border-left: 1px solid gray
+        
+    
+    li.date
+      float: right  
+
+
 // HEADER //////////////////////////////////////////////////////////////////////
 
 
@@ -194,6 +217,8 @@ section.timeline
     margin-right: 2em
     
   article  
+    +span-columns(11) 
+    +suffix(0)  
     padding: 9px 0 9px 0
     margin: 4px 0 5px 0
     
@@ -210,33 +235,31 @@ section.timeline
     img
       vertical-align: middle
     
-    &.platinum, &.bronze, &.media
-      +span-columns(11) 
-      +suffix(0)
+
      
-    &.gold, &.silver
-      +span-columns(5)
+    //&.gold
+    //  +span-columns(6)
+    //  
+    //&.silver
+    //  +span-columns(5)
+    //    
+    //&.silver
+    //  +suffix(0)
+    //  +omega()
       
-    &.silver
-      +suffix(0)
-      +omega()
-      
-    &.platinum
+    &:not(:last-of-type)
       margin-top: 18px
       border-bottom: 1px dashed #d9dade
       
+    &.platinum
+    
       img
         width: 24em
       
-      a:nth-of-type(2n)
-        
-        img
-          margin-right: 0
-        
-    
-    &.bronze
-      border-top: 1px dashed #d9dade
-      border-bottom: 1px dashed #d9dade
+    a:last-of-type
+      
+      img
+        margin-right: 0
 
 
 // RSVP //////////////////////////////////////////////////////////////////////

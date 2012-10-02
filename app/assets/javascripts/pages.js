@@ -6,8 +6,10 @@ $(document).ready( function() {
   target = $('[role=main] footer');
       
   setInterval('animation()', 1000);
+
+  $('nav[role=navigation] a').tooltip({placement: 'right', trigger: 'manual'}).tooltip('show')  
+  $('#lang_selector a').tooltip({placement: 'left'})
   
-  $('#lang_selector a').tooltip({trigger: 'hover', placement: 'left'})
   
 })
 

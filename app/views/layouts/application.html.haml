@@ -23,6 +23,12 @@
   
        
   %body.animations
+    %nav{role: 'navigation'}
+      %ul
+        %li= link_to 'Home', root_path
+        %li= link_to t('pages.index.participants'), clans_path, title: 'NEW!'
+        %li.date=t 'layout.when'
+
 
     %section{role: 'header'}      
       %header
