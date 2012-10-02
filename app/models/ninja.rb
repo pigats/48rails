@@ -3,7 +3,7 @@ class Ninja < ActiveRecord::Base
   belongs_to :clan
  
   def profile_image_url
-    Rails.cache.fetch("profile_image_url_#{self.id}", :expires_in => 0.hours) do
+    Rails.cache.fetch("profile_image_url_#{self.id}", :expires_in => 12.hours) do
       if !self.img.blank?
         img
       elsif !self.fb.blank?
