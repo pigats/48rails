@@ -37,10 +37,7 @@ nav[role=navigation]
   
   ul
     list-style-type: none
-    
-    li
-      padding: 4px 10px 5px
-    
+        
     li:not(.date)
       float: left
       border-right: 1px solid gray
@@ -48,9 +45,23 @@ nav[role=navigation]
       &:first-of-type
         border-left: 1px solid gray
         
+      a
+        display: block
+        padding: 8px 10px 10px
+        margin: -4px 0 -5px
+ 
+        &, &:hover, &:visited
+          @extend h4
+          text-decoration: none 
+        
+        &:hover
+          background: #ccc
+        
     
     li.date
       float: right  
+      padding: 4px 0 5px
+
 
 
 // HEADER //////////////////////////////////////////////////////////////////////
