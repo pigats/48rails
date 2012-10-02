@@ -1,5 +1,5 @@
 class Ninja < ActiveRecord::Base
-  attr_accessible :clan_id, :desc, :fb, :name, :tw, :in, :x, :y
+  attr_accessible :clan_id, :desc, :fb, :name, :tw, :img, :x, :y
   belongs_to :clan
  
   def profile_image_url
