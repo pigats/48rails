@@ -34,7 +34,6 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'twitter'
 gem 'koala'
-gem 'nokogiri'
 
 gem 'rails-i18n'
 
