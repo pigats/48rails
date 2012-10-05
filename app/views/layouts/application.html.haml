@@ -5,23 +5,23 @@
     = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
     = csrf_meta_tags
-    = favicon_link_tag   
+    = favicon_link_tag
 
     - if Rails.env.production?
       :javascript
-  
+
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-34709010-1']);
         _gaq.push(['_trackPageview']);
-      
+
         (function() {
           var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
 
-  
-       
+
+
   %body.animations
     %nav{role: 'navigation'}
       %ul
@@ -29,99 +29,98 @@
         %li= link_to t('pages.index.participants'), clans_path, title: 'NEW!'
         %li.date=t 'layout.when'
 
-
-    %section{role: 'header'}      
+    %section{role: 'header'}
+      =image_tag 'sold_out.png', class: 'sold_out'
       %header
         %h1
           =image_tag 'ninja_logo.png', class: 'ninja'
           %span._4.animated> 4
           %span._8> 8
-          %span._rails> rails 
-             
+          %span._rails> rails
+
       %h2.pitch
         %small=t 'layout.when'
         %br/
         =t 'layout.pitch'
-                        
-    
+
+
       %section.timeline
-        
-        %div          
+
+        %div
           %article.current.past
             %header=t 'layout.registration_48rails_date_html'
             %p=t 'layout.registration_48rails_what_html'
-              
-              
+
+
           %article.current
             %header=t 'layout.registration_railsrumble_date_html'
             %p=t 'layout.registration_railsrumble_what_html'
-          
+
           %article.future
             %header=t 'layout.hack_date_html'
             %p=t 'layout.hack_what_html'
-          
+
     %section{role: 'main', class: "#{controller.controller_name}_#{controller.action_name}"}
       %div
         = yield
 
 
     %footer
-      = render 'layouts/countdown'     
+      = render 'layouts/countdown'
 
-    
+
       %div
-        
+
         %article.third
           %header About
-          %p 
+          %p
             = image_tag 'dexter.png', class: 'dexter'
             %b 48 rails&nbsp;
             =t 'layout.a_project_by'
-            &nbsp;  
+            &nbsp;
             %a{href: 'http://www.programmersinpadua.it', target: '_blank'}> Programmers in Padua
             ,
             =t 'layout.pip_pitch'
-            
+
           %ul
-            %li 
-              %a{href: 'http://twitter.com/brigugraphic', target: '_blank'} @brigugraphic 
+            %li
+              %a{href: 'http://twitter.com/brigugraphic', target: '_blank'} @brigugraphic
               &ndash; graphic ninja
             %li
               %a{href: 'http://twitter.com/ogeidix', target: '_blank'} @ogeidix
-              &ndash; west coast ninja  
-            %li 
+              &ndash; west coast ninja
+            %li
               %a{href: 'http://twitter.com/pigatss', target: '_blank'} @pigatss
-              &ndash; organization ninja          
+              &ndash; organization ninja
             %li
               %a{href: 'http://twitter.com/realfuzzy', target: '_blank'} @realfuzzy
               &ndash; rails ninja
-            
-          
+
+
         %article.third
 
           %header=t 'layout.contact_us'
-          %p 
+          %p
             =t 'layout.email_us_at'
             %a{href: 'mailto:ninja@48rails.it'} ninja@48rails.it
-          
-          %p 
+
+          %p
             =t 'layout.tweet_us_at'
             %a{href: 'http://twitter.com/48rails', target: '_blank'} @48rails
-            
+
           %p=t 'layout.staff_call'
-                      
+
         %article.third
-    
-    
+
+
     %p#lang_selector
       - if I18n.locale == :it
         = image_tag 'italian.png', lang: 'it', class: 'selected'
-        %a{href: "#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=en", title: 'switch to English', lang: 'en'} 
+        %a{href: "#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=en", title: 'switch to English', lang: 'en'}
           = image_tag 'english.png', lang: 'en'
 
-      
+
       - else
         %a{href: "#{request.url.gsub(/\?lang=[a-z]{2}/,'')}?lang=it", title: 'passa all\'Italiano', lang: 'it'}
           = image_tag 'italian.png', lang: 'it'
         = image_tag 'english.png', lang: 'en', class: 'selected'
-  
