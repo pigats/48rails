@@ -72,6 +72,16 @@
   50%
     +rotate(-180deg)
  
+
++keyframes(impress)
+  0%, 70%
+    +translateZ(1000px)
+    opacity: 0
+    
+  80%, 100%
+    +translateZ(0)
+    opacity: 1 
+    
     
 body.animations      
       
@@ -83,6 +93,9 @@ body.animations
       
     ._4
       +animation(kicked 3s 1) 
+      
+    .sold_out
+      +animation(impress 3.5s 1)
       
   > section[role=main]   
   
@@ -103,3 +116,6 @@ body.animations
 
       .flower
         +animation(flower 10s infinite)
+        
+        
+    
