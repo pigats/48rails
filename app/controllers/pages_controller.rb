@@ -5,17 +5,10 @@ class PagesController < ApplicationController
   def about
   end
   
-  def participants
-    fb = Koala::Facebook::API.new
-    
-    @participants = {}
-    Clan.all.each do |clan|      
-      
-      @participants[clan] = clan.ninjas
-    end
-  
+  def schedule
   end
   
-  def sponsors
+  def map   
   end
+  
 end

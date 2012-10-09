@@ -7,7 +7,6 @@ $(document).ready( function() {
       
   setInterval('animation()', 1000);
 
-  $('nav[role=navigation] a').tooltip({placement: 'right', trigger: 'manual'}).tooltip('show')  
   $('#lang_selector a').tooltip({placement: 'left'})
   
   

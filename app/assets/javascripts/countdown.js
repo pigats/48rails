@@ -1,4 +1,11 @@
-var opening = new Date(2012,9,13,01,00,00)
+var opening = new Date;
+opening.setUTCFullYear(2012);
+opening.setUTCMonth(9);
+opening.setUTCDate(13);
+opening.setUTCHours(0);
+opening.setUTCMinutes(0);
+opening.setUTCSeconds(0);
+
 var now = new Date();
 var timediff = parseInt((opening.getTime()-now.getTime()) / 1000);
 

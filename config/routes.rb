@@ -1,7 +1,9 @@
 Pip48rails::Application.routes.draw do
 
   get 'about' => 'pages#about'
-  get 'sponsors' => 'pages#sponsors'
+  get 'schedule' => 'pages#schedule'
+  get 'map' => 'pages#map'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

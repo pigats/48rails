@@ -21,7 +21,8 @@ it:
     registration_railsrumble_what_html: "Registrazione team al RailsRumble"   
     hack_date_html: "13 e 14 Ott."
     hack_what_html: "Hack!"    
-
+    schedule: "Programma"
+    map: "Mappa"
 
   pages:
 
@@ -43,10 +44,9 @@ it:
       sponsor_food_and_coffee_desc: "Avete idea di quanto possano essere famelici dei ninja dev mentre lavorano? 48h sono lunghe, avremo bisogno di cibo, snack, bevande e soprattutto… caffeina!"
       sponsor_prizes: "Premi"
       sponsor_prizes_desc: "La tua azienda ha delle API pubbliche e vuoi mettere in palio un premio per l'hack più cool? Mettiti in contatto con noi, resterai sbalordito."
-      
- 
       our_sponsors: "I nostri sponsor"
       want_to_sponsor_html: "Vuoi essere uno dei nostri fantastici sponsor? Scrivici a <a href='mailto:sponsor@48rails.it'>sponsor@48rails.it</a>"   
+      
  
   clans:
       

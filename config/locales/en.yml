@@ -20,7 +20,9 @@ en:
     registration_railsrumble_date_html: "1st &rightarrow; 7th Oct."
     registration_railsrumble_what_html: "Register your team to RailsRumble"   
     hack_date_html: "Oct. 13th-14th"
-    hack_what_html: "Hack!"  
+    hack_what_html: "Hack!" 
+    schedule: "Schedule"
+    map: "Map" 
     
   pages:
 
