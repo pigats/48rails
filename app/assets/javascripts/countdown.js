@@ -1,4 +1,4 @@
-var opening = new Date(2012,9,14,01,00,00)
+var opening = new Date(2012,9,13,01,00,00)
 var now = new Date();
 var timediff = parseInt((opening.getTime()-now.getTime()) / 1000);
 
