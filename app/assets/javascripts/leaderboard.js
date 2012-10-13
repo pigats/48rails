@@ -25,7 +25,7 @@ $(window).ready(function() {
   if(location.indexOf('/leaderboard/team_sinergy') != -1) { next_index = 4 } 
   if(location.indexOf('/leaderboard/stakanov') != -1) { next_index = 0 }  
  
-  setTimeout(function() {window.location = path + links[next_index]}, 5000) 
+  setTimeout(function() {window.location = path + links[next_index]}, 7000) 
 
 })
 
