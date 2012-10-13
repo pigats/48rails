@@ -33,5 +33,5 @@ function draw(time_serie, colors) {
   data = []
   $.each(time_serie, function(i,d) { data[i] = eval(d); }) 
   $.each(data, function(i, team) { $.each(team, function(j,c) {  data[i][j][0] *= 1000 } ) })
-  $.jqplot('chartdiv', data, { axes: { xaxis: { renderer: $.jqplot.DateAxisRenderer, min: railsrumble_start, max: railsrumble_stop } }, series: [{color: colors[0]},{color: colors[1]},{color: colors[2]},{color: colors[3]},{color: colors[4]},{color: colors[5]},{color: colors[6]}] } );
+  $.jqplot('chartdiv', data, { axes: { xaxis: { renderer: $.jqplot.DateAxisRenderer, min: railsrumble_start, max: railsrumble_stop }, yaxis: {min: 0, max: 10.1} }, series: [{color: colors[0], markerOptions: {style: 'diamond'} },{color: colors[1], markerOptions: {style: 'x'}},{color: colors[2], markerOptions: {style: 'circle'}},{color: colors[3], markerOptions: {style: 'filledSquare'}},{color: colors[4], markerOptions: {style: 'dash'}},{color: colors[5], markerOptions: {style: 'plus'}},{color: colors[6], markerOptions: {style: 'square'}}] } );
 }
