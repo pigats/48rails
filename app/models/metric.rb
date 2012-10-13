@@ -22,7 +22,7 @@ class Metric
     end          
   end
   
-  def _48rails
+  def 48rails
     Metric::get("#{Metric::metrics_names.key(:_48rails)}_#{Metric::teams_names.key(@team)}.json")    
   end
   
@@ -31,7 +31,7 @@ class Metric
   end
   
   def team_balance
-    Metric::get("#{Metric::metrics_names.key(:load_balance)}_#{Metric::teams_names.key(@team)}.json")
+    Metric::get("#{Metric::metrics_names.key(:team_balance)}_#{Metric::teams_names.key(@team)}.json")
   end
   
   def team_sinergy
