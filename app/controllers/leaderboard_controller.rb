@@ -4,6 +4,11 @@ class LeaderboardController < ApplicationController
     @leaderboard = Metric.new.leaderboard 
   end
   
+  def first_prize
+    @time_serie = Metric::teams.map { |team| Metric.new(team).first_prize }
+    @colors = LeaderboardController::colors     
+  end
+  
   def load_constancy
     @time_serie = Metric::teams.map { |team| Metric.new(team).load_constancy }
     @colors = LeaderboardController::colors   
