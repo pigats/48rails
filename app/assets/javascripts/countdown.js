@@ -26,6 +26,16 @@ m1 = mins - (m10*10);
 s10 = parseInt(secs / 10);
 s1 = secs - (s10*10);
 
+d10 = 0;
+d1 = 0;
+h10 = 0;
+h1 = 0;
+m10 = 0;
+m1 = 0;
+s10 = 0;
+s1 = 0;
+
+
 $(document).ready(function() {
 	
 	set($("#s1"), s1, 9);
