@@ -6,7 +6,6 @@ Pip48rails::Application.routes.draw do
   get 'schedule' => 'pages#schedule'
   get 'map' => 'pages#map'
   
-  get 'leaderboard' => 'leaderboard#index'
   match 'leaderboard/:action', :controller => 'leaderboard'
 
 
