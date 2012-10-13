@@ -42,20 +42,20 @@ class Metric
     Metric::get("#{Metric::metrics_names.key(:stakanov)}_#{Metric::teams_names.key(@team)}.json")    
   end
 
+  def self.headers
+    res = self.get('metrics.json').split(/\n/)[1].scan(/\w+/)
+    res.map {|metric| self.metrics_names[metric] }    
+  end
+  
+  def self.teams 
+    res = self.get('metrics.json').split(/\n/)[0].scan(/\w+-\w+-\w+/)
+    res.map {|team| self.teams_names[team] }
+  end
+
   private 
 
-    def self.headers
-      res = self.get('metrics.json').split(/\n/)[1].scan(/\w+/)
-      res.map {|metric| self.metrics_names[metric] }    
-    end
-    
-    def self.teams 
-      res = self.get('metrics.json').split(/\n/)[0].scan(/\w+-\w+-\w+/)
-      res.map {|team| self.teams_names[team] }
-    end
-
     def self.get(url)
-      Rails.cache.fetch(url, :expires_in => 0.minutes) do 
+      Rails.cache.fetch(url, :expires_in => 10.minutes) do 
         open("http://ec2-54-247-159-112.eu-west-1.compute.amazonaws.com/#{url}").read 
       end   
     end
