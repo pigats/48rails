@@ -1,0 +1,13 @@
+%h1 Load Constancy
+
+
+%div#chartdiv
+
+:javascript 
+  time_serie = #{@time_serie}
+  colors = #{@colors}
+  
+  
+  $(document).ready(function() {
+    draw(time_serie, colors)
+  });

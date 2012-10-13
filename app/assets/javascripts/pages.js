@@ -25,7 +25,7 @@ var f, target
 var counter = 0;
 
 function animation() {
-//  timer_s1()
+  //timer_s1()
   if ($('body').hasClass('animations')) {
     if(counter < 2) {
       counter += 1

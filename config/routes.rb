@@ -1,8 +1,13 @@
 Pip48rails::Application.routes.draw do
 
+  get "leaderboard/index"
+
   get 'about' => 'pages#about'
   get 'schedule' => 'pages#schedule'
   get 'map' => 'pages#map'
+  
+  get 'leaderboard' => 'leaderboard#index'
+  match 'leaderboard/:action', :controller => 'leaderboard'
 
 
   # The priority is based upon order of creation:
