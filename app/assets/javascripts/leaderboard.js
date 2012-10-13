@@ -14,12 +14,12 @@ railsrumble_stop.setUTCSeconds(0);
 
 var path = "http://www.48rails.it/leaderboard/"
 
-var links = ['48rails', 'load_constancy', 'team_balance', 'team_sinergy', 'stakanov']
+var links = ['first_prize', 'load_constancy', 'team_balance', 'team_sinergy', 'stakanov']
 
 $(window).ready(function() {
   var location = window.location;
   var next_index;
-  if(location.indexOf('/leaderboard/48rails') != -1) { next_index = 1 }
+  if(location.indexOf('/leaderboard/first_prize') != -1) { next_index = 1 }
   if(location.indexOf('/leaderboard/load_constancy') != -1) { next_index = 2 }  
   if(location.indexOf('/leaderboard/team_balance') != -1) { next_index = 3 }
   if(location.indexOf('/leaderboard/team_sinergy') != -1) { next_index = 4 } 

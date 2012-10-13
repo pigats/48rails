@@ -22,7 +22,7 @@ class Metric
     end          
   end
   
-  def 48rails
+  def first_prize
     Metric::get("#{Metric::metrics_names.key(:_48rails)}_#{Metric::teams_names.key(@team)}.json")    
   end
   
