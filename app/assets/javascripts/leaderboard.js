@@ -17,7 +17,7 @@ var path = "http://www.48rails.it/leaderboard/"
 var links = ['first_prize', 'load_constancy', 'team_balance', 'team_sinergy', 'stakanov']
 
 $(window).ready(function() {
-  var location = window.location;
+  var location = window.location.toString();
   var next_index;
   if(location.indexOf('/leaderboard/first_prize') != -1) { next_index = 1 }
   if(location.indexOf('/leaderboard/load_constancy') != -1) { next_index = 2 }  
