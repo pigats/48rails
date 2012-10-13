@@ -27,7 +27,7 @@ class LeaderboardController < ApplicationController
   def self.colors 
     Rails.cache.fetch('colors', :expires_in => 24.hours) do     
       Metric::teams_names.map do |team| 
-        Clan.find_by_name(team.to_s).ensign
+        Clan.find_by_name(team.to_s.capitalize).ensign
       end
     end
   end

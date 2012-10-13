@@ -65,7 +65,7 @@ class Metric
     end
     
     def self.teams_names
-      {"r12-team-36" => :mikamayhem, "r12-team-37" => :gangnamers, "r12-team-4" => :drunk_team, "r12-team-28" => :timerepublik, "r12-team-518" => :brogrammers, "r12-team-43" => :arrr_team, "r12-team-409" => :rubicuori}
+      {"r12-team-36" => "Mikamayhem", "r12-team-37" => "Gangnamers", "r12-team-4" => "Drunk Team", "r12-team-28" => "Timerepublik", "r12-team-518" => "Brogrammers", "r12-team-43" => "Arrr Team", "r12-team-409" => "Rubicuori"}
     end
   
 end
